@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7YB3D908NS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-7YB3D908NS');
+</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Free Quote | Contact Clear & Clean Window Cleaning</title>
+<meta name="description" content="Get a fast, free window cleaning quote from Clear & Clean Window Cleaning. Serving Dallas–Fort Worth. Call (972) 890-5467 or request your quote online today!" />
+<link rel="canonical" href="https://clearandcleanwindowcleaning.com/contact" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="author" content="Clear & Clean Window Cleaning" />
+<meta name="theme-color" content="#f1b69f" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Clear & Clean Window Cleaning" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:title" content="Free Quote | Contact Clear & Clean Window Cleaning" />
+<meta property="og:description" content="Get a fast, free window cleaning quote from Clear & Clean Window Cleaning. Serving Dallas–Fort Worth. Call (972) 890-5467 or request your quote online today!" />
+<meta property="og:url" content="https://clearandcleanwindowcleaning.com/contact" />
+<meta property="og:image" content="https://clearandcleanwindowcleaning.com/images/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Clear & Clean Window Cleaning — streak-free window cleaning in Dallas–Fort Worth" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Free Quote | Contact Clear & Clean Window Cleaning" />
+<meta name="twitter:description" content="Get a fast, free window cleaning quote from Clear & Clean Window Cleaning. Serving Dallas–Fort Worth. Call (972) 890-5467 or request your quote online today!" />
+<meta name="twitter:image" content="https://clearandcleanwindowcleaning.com/images/og-image.png" />
+<meta name="geo.region" content="US-CO" />
+<meta name="geo.placename" content="Colorado Springs, Colorado" />
+<meta name="geo.position" content="38.8339;-104.8214" />
+<meta name="ICBM" content="38.8339, -104.8214" />
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+<link rel="stylesheet" href="css/fonts.css?v=20260614" />
+<link rel="stylesheet" href="css/styles.css?v=20260614" />
+<style>
+  /* ===== Quote wizard — standalone, no nav/footer ===== */
+  body{min-height:100svh;background:var(--ink);color:#fff;display:flex;flex-direction:column;}
+  .quote{flex:1;width:100%;max-width:1080px;margin:0 auto;padding:clamp(28px,5vw,56px) clamp(20px,5vw,40px) clamp(40px,6vw,72px);display:flex;flex-direction:column;}
+
+  /* progress bar */
+  .steps{display:flex;align-items:flex-start;justify-content:space-between;gap:6px;max-width:760px;margin:0 auto clamp(36px,6vw,64px);width:100%;position:relative;}
+  .step{display:flex;flex-direction:column;align-items:center;gap:10px;flex:1;position:relative;z-index:1;}
+  .step__dot{width:clamp(38px,5vw,52px);height:clamp(38px,5vw,52px);border-radius:50%;display:grid;place-items:center;
+    background:#1c1c1c;border:2px solid rgba(255,255,255,.18);color:#9a9a9a;font-weight:900;font-size:clamp(15px,1.7vw,20px);
+    transition:all .3s ease;}
+  .step__label{font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:clamp(10px,1.2vw,13px);color:#7d7d7d;text-align:center;transition:color .3s ease;white-space:nowrap;}
+  .step__line{position:absolute;top:clamp(19px,2.5vw,26px);left:calc(50% + clamp(22px,3vw,30px));right:calc(-50% + clamp(22px,3vw,30px));height:2.5px;background:rgba(255,255,255,.14);z-index:0;}
+  .step:last-child .step__line{display:none;}
+  .step.is-active .step__dot{background:var(--orange);border-color:var(--orange);color:#1a1205;box-shadow:0 0 0 6px rgba(251,176,60,.18);}
+  .step.is-active .step__label{color:#fff;}
+  .step.is-done .step__dot{background:var(--orange);border-color:var(--orange);color:#1a1205;}
+  .step.is-done .step__line{background:var(--orange);}
+  .step.is-done .step__label{color:#c9c9c9;}
+
+  /* panels — visible by default; entrance animates transform only so content
+     never depends on the animation clock to become visible */
+  .panel{display:none;}
+  .panel.is-active{display:block;animation:slidein .35s ease;}
+  @keyframes slidein{from{transform:translateY(14px);}to{transform:none;}}
+  .q-title{text-align:center;font-weight:900;text-transform:uppercase;line-height:.95;letter-spacing:-.01em;color:var(--orange);
+    font-size:clamp(34px,5.5vw,68px);margin:0 0 clamp(30px,4vw,52px);}
+
+  /* choice cards */
+  .choices{display:grid;gap:clamp(16px,2vw,24px);}
+  .choices--3{grid-template-columns:repeat(3,1fr);}
+  .choices--2{grid-template-columns:repeat(2,1fr);max-width:760px;margin:0 auto;}
+  .choices--4{grid-template-columns:repeat(4,1fr);}
+  .choice{position:relative;background:linear-gradient(180deg,#262626 0%,#121212 100%);border:2px solid rgba(255,255,255,.1);
+    border-radius:22px;padding:clamp(22px,3vw,40px) 18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;
+    cursor:pointer;text-align:center;font-family:inherit;transition:border-color .2s,transform .2s,box-shadow .25s;min-height:clamp(150px,20vw,230px);}
+  .choice:hover{transform:translateY(-3px);border-color:rgba(251,176,60,.55);}
+  .choice.is-selected{border-color:var(--orange);box-shadow:0 0 0 3px rgba(251,176,60,.25),0 20px 44px -24px rgba(251,176,60,.5);}
+  .choice svg{width:clamp(48px,6vw,84px);height:clamp(48px,6vw,84px);color:var(--orange);}
+  [data-single="state"] .choice svg{width:auto;height:clamp(72px,9vw,112px);}
+  .choice__name{font-weight:900;text-transform:uppercase;letter-spacing:.01em;color:#fff;font-size:clamp(16px,1.9vw,26px);line-height:1.05;}
+  .choices--4 .choice{padding:clamp(18px,2vw,28px) 14px;min-height:clamp(140px,16vw,190px);gap:14px;}
+  .choices--4 .choice svg{width:clamp(40px,4.5vw,60px);height:clamp(40px,4.5vw,60px);}
+  .choices--4 .choice__name{font-size:clamp(13px,1.4vw,17px);}
+
+  /* form fields */
+  .fields{display:flex;flex-direction:column;gap:clamp(18px,2.4vw,26px);max-width:880px;margin:0 auto;width:100%;}
+  .field{display:flex;flex-direction:column;gap:10px;}
+  .field label{font-weight:900;text-transform:uppercase;letter-spacing:.03em;font-size:clamp(15px,1.6vw,19px);color:var(--orange);}
+  .field input{font-family:inherit;font-size:17px;font-weight:500;color:#141414;background:#efefed;border:2px solid transparent;border-radius:14px;padding:16px 18px;width:100%;transition:border-color .2s,box-shadow .2s;}
+  .field input::placeholder{color:#8a8a8a;}
+  .field input:focus{outline:none;border-color:var(--orange);box-shadow:0 0 0 3px rgba(251,176,60,.25);}
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2vw,20px);}
+  .phone-wrap{display:flex;align-items:stretch;gap:10px;}
+  .phone-wrap .cc{flex:0 0 auto;display:flex;align-items:center;padding:0 16px;background:#efefed;border-radius:14px;color:#444;font-weight:700;font-size:17px;}
+
+  /* nav buttons */
+  .q-nav{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:clamp(34px,5vw,56px);}
+  .q-count{font-weight:700;color:#8c8c8c;font-size:clamp(15px,1.6vw,18px);}
+  .q-actions{display:flex;gap:14px;margin-left:auto;}
+  .q-actions .btn{font-weight:900;font-family:inherit;}
+  .q-err{display:none;text-align:center;background:rgba(220,60,60,.14);border:1px solid rgba(220,60,60,.4);color:#ff8d8d;font-weight:700;border-radius:14px;padding:14px 18px;margin:22px auto 0;max-width:880px;}
+  .q-err.show{display:block;}
+
+  /* success */
+  .q-done{display:none;text-align:center;max-width:640px;margin:0 auto;padding:clamp(30px,5vw,60px) 0;}
+  .q-done.show{display:block;animation:slidein .4s ease;}
+  .q-done__badge{width:96px;height:96px;border-radius:50%;background:var(--orange);color:#1a1205;display:grid;place-items:center;margin:0 auto 28px;}
+  .q-done__badge svg{width:50px;height:50px;}
+  .q-done h2{font-weight:900;text-transform:uppercase;font-size:clamp(32px,5vw,56px);color:var(--orange);margin:0 0 16px;line-height:.95;}
+  .q-done p{font-weight:500;font-size:clamp(16px,1.8vw,20px);color:#d4d4d4;line-height:1.5;margin:0 0 30px;}
+
+  @media(max-width:760px){
+    .choices--3{grid-template-columns:1fr;max-width:420px;margin:0 auto;}
+    .choices--4{grid-template-columns:1fr 1fr;}
+    .field-row{grid-template-columns:1fr;}
+    .step__label{font-size:10px;}
+    .step__line{left:calc(50% + 18px);right:calc(-50% + 18px);}
+  }
+  @media(max-width:460px){
+    .steps{max-width:100%;}
+    .step__label{display:none;}
+  }
+</style>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ContactPage","name":"Free Quote | Clear & Clean Window Cleaning","url":"https://clearandcleanwindowcleaning.com/contact","isPartOf":{"@id":"https://clearandcleanwindowcleaning.com/#website"},"about":{"@id":"https://clearandcleanwindowcleaning.com/#organization"},"inLanguage":"en-US"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://clearandcleanwindowcleaning.com/"},{"@type":"ListItem","position":2,"name":"Free Quote","item":"https://clearandcleanwindowcleaning.com/contact"}]}</script>
+</head>
+<body>
+<main class="quote">
+  <!-- progress bar -->
+  <div class="steps" id="steps">
+    <div class="step" data-step="1"><div class="step__dot">1</div><div class="step__label">Location</div><div class="step__line"></div></div>
+    <div class="step" data-step="2"><div class="step__dot">2</div><div class="step__label">Your Info</div><div class="step__line"></div></div>
+    <div class="step" data-step="3"><div class="step__dot">3</div><div class="step__label">Property</div><div class="step__line"></div></div>
+    <div class="step" data-step="4"><div class="step__dot">4</div><div class="step__label">Services</div><div class="step__line"></div></div>
+    <div class="step" data-step="5"><div class="step__dot">5</div><div class="step__label">Address</div><div class="step__line"></div></div>
+  </div>
+
+  <form id="quoteForm" name="quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+    <input type="hidden" name="form-name" value="quote" />
+    <input type="hidden" name="state" id="f-state" />
+    <input type="hidden" name="property" id="f-property" />
+    <input type="hidden" name="services" id="f-services" />
+    <p hidden><label>Don't fill this out: <input name="bot-field" /></label></p>
+    <!-- STEP 1: LOCATION -->
+    <section class="panel is-active" data-panel="1">
+      <h1 class="q-title">Where Are You Located?</h1>
+      <div class="choices choices--3" data-single="state">
+        <button type="button" class="choice" data-value="Collin County">
+          <svg viewBox="0 0 135 100" fill="currentColor" aria-hidden="true"><path d="M3 6 H132 V94 H3 Z"/></svg>
+          <span class="choice__name">Collin County</span>
+        </button>
+        <button type="button" class="choice" data-value="Dallas County">
+          <svg viewBox="0 0 100 108" fill="currentColor" aria-hidden="true"><path d="M10 28 L40 28 L40 14 L58 10 L60 22 L72 30 L78 46 L88 64 L84 76 L79 76 L79 96 L92 96 L92 104 L73 104 L73 82 L68 76 L24 76 L21 54 L13 44 L11 36 Z"/></svg>
+          <span class="choice__name">Dallas County</span>
+        </button>
+        <button type="button" class="choice" data-value="Denton or Tarrant County">
+          <svg viewBox="0 0 100 104" fill="currentColor" aria-hidden="true"><path d="M8 24 L58 24 L58 10 L74 10 L75 30 L90 34 L85 50 L91 64 L82 80 L86 92 L74 98 L20 95 L16 60 L10 40 Z"/></svg>
+          <span class="choice__name">Denton / Tarrant</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- STEP 2: YOUR INFO -->
+    <section class="panel" data-panel="2">
+      <h1 class="q-title">Let's Get To Know You</h1>
+      <div class="fields">
+        <div class="field-row">
+          <div class="field"><label for="firstName">First Name</label><input type="text" id="firstName" name="firstName" placeholder="Enter name here" autocomplete="given-name" /></div>
+          <div class="field"><label for="lastName">Last Name</label><input type="text" id="lastName" name="lastName" placeholder="Enter name here" autocomplete="family-name" /></div>
+        </div>
+        <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="Enter email here" autocomplete="email" /></div>
+        <div class="field"><label for="phone">Phone Number</label>
+          <div class="phone-wrap"><span class="cc">+1</span><input type="tel" id="phone" name="phone" placeholder="(123) 456 - 7890" autocomplete="tel" /></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEP 3: PROPERTY -->
+    <section class="panel" data-panel="3">
+      <h1 class="q-title">What Type Of Property?</h1>
+      <div class="choices choices--2" data-single="property">
+        <button type="button" class="choice" data-value="Commercial">
+          <svg viewBox="0 0 24 24" fill="currentColor" fill-rule="evenodd"><path d="M3 21V7l8-4v4l8-3v17h-6v-4h-4v4H3z M6 9h2v2H6z M6 13h2v2H6z M14 9h2v2h-2z M14 13h2v2h-2z"/></svg>
+          <span class="choice__name">Commercial</span>
+          
+        </button>
+        <button type="button" class="choice" data-value="Residential">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 2 11h3v9h5v-6h4v6h5v-9h3L12 3z"/></svg>
+          <span class="choice__name">Residential</span>
+          
+        </button>
+      </div>
+    </section>
+
+    <!-- STEP 4: SERVICES -->
+    <section class="panel" data-panel="4">
+      <h1 class="q-title">What Services?</h1>
+      <div class="choices choices--4" data-multi="services">
+        <button type="button" class="choice" data-value="Exterior Windows">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1.2"/><path d="M12 3v18M4 9h16M4 15h16"/></svg>
+          <span class="choice__name">Exterior Windows</span>
+        </button>
+        <button type="button" class="choice" data-value="Interior Windows">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.6 3h2.8l1 4H3.6z"/><path d="M6 7v8"/><path d="M4.3 18l.8-3h1.8l.8 3z"/><path d="M12.5 13v-1.5A1.5 1.5 0 0 1 14 10h3.5a1.5 1.5 0 0 1 1.5 1.5V13"/><path d="M12 13h7.5v4H12z"/><path d="M12.8 17v1.6M18.7 17v1.6"/></svg>
+          <span class="choice__name">Interior Windows</span>
+        </button>
+        <button type="button" class="choice" data-value="Track Cleaning">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 12.5c0-.6.4-1 1-1h2.2l3-3c.4-.4 1-.4 1.4 0 .3.3.4.8.2 1.2l-1.4 1.8H18a1 1 0 0 1 1 1v.5a3.5 3.5 0 0 1-3.5 3.5H8.5A4.5 4.5 0 0 1 4 12.5z"/><path d="M15 3.2l.9 2 2 .9-2 .9-.9 2-.9-2-2-.9 2-.9z"/></svg>
+          <span class="choice__name">Track Cleaning</span>
+        </button>
+        <button type="button" class="choice" data-value="Screen Repair">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4l-6 6 2 2 6-6a4 4 0 0 0 5.4-5.4l-2.5 2.5-2-2 2.5-2.5z"/></svg>
+          <span class="choice__name">Screen Repair</span>
+        </button>
+        <button type="button" class="choice" data-value="Screen Cleaning">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="1.2"/><path d="M4 8h16M4 12h16M4 16h16"/></svg>
+          <span class="choice__name">Screen Cleaning</span>
+        </button>
+        <button type="button" class="choice" data-value="Holiday Lighting">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 6.5C8 9 16 9 21 6.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 8v2.4M12 8.6v1.8M18 8v2.4" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="6" cy="12" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="18" cy="12" r="1.8"/></svg>
+          <span class="choice__name">Holiday Lighting</span>
+        </button>
+        <button type="button" class="choice" data-value="Gutter Cleaning">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h11v4H4z"/><path d="M11 9v6a3 3 0 0 0 3 3h2"/><path d="M16 16v4"/></svg>
+          <span class="choice__name">Gutter Cleaning</span>
+        </button>
+        <button type="button" class="choice" data-value="Solar Panel Cleaning">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><path d="M5 4h14l1.5 9H3.5z"/><path d="M3.2 13h17.6M9 4l-.8 9M15 4l.8 9M4.3 8.5h15.4"/><path d="M12 13v4M9.5 20h5"/></svg>
+          <span class="choice__name">Solar Panel Cleaning</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- STEP 5: ADDRESS -->
+    <section class="panel" data-panel="5">
+      <h1 class="q-title">Property Info</h1>
+      <div class="fields">
+        <div class="field"><label for="street">Address</label><input type="text" id="street" name="street" placeholder="Enter street here" autocomplete="address-line1" /></div>
+        <div class="field-row">
+          <div class="field"><label for="city" class="sr-hide" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);">City</label><input type="text" id="city" name="city" placeholder="City" autocomplete="address-level2" /></div>
+          <div class="field"><label for="zip" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);">Zip Code</label><input type="text" id="zip" name="zip" placeholder="Zip Code" inputmode="numeric" autocomplete="postal-code" /></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="q-err" id="qErr">Please complete this step to continue.</div>
+
+    <!-- nav -->
+    <div class="q-nav">
+      <span class="q-count" id="qCount">Step 1 / 5</span>
+      <div class="q-actions">
+        <button type="button" class="btn btn-orange" id="prevBtn" style="display:none;">Previous</button>
+        <button type="button" class="btn btn-white" id="nextBtn">Next</button>
+        <button type="submit" class="btn btn-orange" id="submitBtn" style="display:none;">Request My Quote</button>
+      </div>
+    </div>
+  </form>
+
+  <!-- success -->
+  <div class="q-done" id="qDone">
+    <div class="q-done__badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+    <h2>Thank You!</h2>
+    <p>Your quote request is on its way to the Clear & Clean team. We'll be in touch shortly — usually within one business day. Prefer to talk now? Call us at (972) 890-5467.</p>
+    <a class="btn btn-orange btn-lg" href="/">Back To Home</a>
+  </div>
+</main>
+
+<script>
+(function(){
+  "use strict";
+  var TOTAL = 5, current = 1;
+  var data = { state:"", property:"", services:[] };
+
+  var panels = document.querySelectorAll('.panel');
+  var stepEls = document.querySelectorAll('.step');
+  var prevBtn = document.getElementById('prevBtn');
+  var nextBtn = document.getElementById('nextBtn');
+  var submitBtn = document.getElementById('submitBtn');
+  var qCount = document.getElementById('qCount');
+  var qErr = document.getElementById('qErr');
+
+  // selection handlers
+  document.querySelectorAll('[data-single]').forEach(function(group){
+    var key = group.getAttribute('data-single');
+    group.querySelectorAll('.choice').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        group.querySelectorAll('.choice').forEach(function(b){ b.classList.remove('is-selected'); });
+        btn.classList.add('is-selected');
+        data[key] = btn.getAttribute('data-value');
+        hideErr();
+      });
+    });
+  });
+  document.querySelectorAll('[data-multi]').forEach(function(group){
+    var key = group.getAttribute('data-multi');
+    group.querySelectorAll('.choice').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var v = btn.getAttribute('data-value');
+        var on = btn.classList.toggle('is-selected');
+        if (on) { if (data[key].indexOf(v)<0) data[key].push(v); }
+        else { data[key] = data[key].filter(function(x){ return x!==v; }); }
+        hideErr();
+      });
+    });
+  });
+
+  function showErr(msg){ qErr.textContent = msg; qErr.classList.add('show'); }
+  function hideErr(){ qErr.classList.remove('show'); }
+
+  function validate(step){
+    if (step===1 && !data.state) return "Please select your state to continue.";
+    if (step===2){
+      var fn = val('firstName'), em = val('email'), ph = val('phone');
+      if (!fn) return "Please enter your first name.";
+      if (!em || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)) return "Please enter a valid email address.";
+      if (!ph || ph.replace(/\D/g,'').length < 7) return "Please enter a valid phone number.";
+    }
+    if (step===3 && !data.property) return "Please choose a property type.";
+    if (step===4 && data.services.length===0) return "Please select at least one service.";
+    if (step===5){
+      if (!val('street')) return "Please enter your street address.";
+      if (!val('city')) return "Please enter your city.";
+      if (!val('zip')) return "Please enter your zip code.";
+    }
+    return null;
+  }
+  function val(id){ var e=document.getElementById(id); return e ? e.value.trim() : ""; }
+
+  function render(){
+    panels.forEach(function(p){ p.classList.toggle('is-active', +p.getAttribute('data-panel')===current); });
+    stepEls.forEach(function(s){
+      var n = +s.getAttribute('data-step');
+      s.classList.toggle('is-active', n===current);
+      s.classList.toggle('is-done', n<current);
+    });
+    qCount.textContent = "Step " + current + " / " + TOTAL;
+    prevBtn.style.display = current>1 ? "inline-flex" : "none";
+    nextBtn.style.display = current<TOTAL ? "inline-flex" : "none";
+    submitBtn.style.display = current===TOTAL ? "inline-flex" : "none";
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+
+  nextBtn.addEventListener('click', function(){
+    var err = validate(current);
+    if (err){ showErr(err); return; }
+    hideErr();
+    if (current<TOTAL){ current++; render(); }
+  });
+  prevBtn.addEventListener('click', function(){
+    hideErr();
+    if (current>1){ current--; render(); }
+  });
+
+  document.getElementById('quoteForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var err = validate(TOTAL);
+    if (err){ showErr(err); return; }
+    hideErr();
+
+    // Mirror the button-based selections into the hidden fields Netlify reads.
+    document.getElementById('f-state').value = data.state;
+    document.getElementById('f-property').value = data.property;
+    document.getElementById('f-services').value = data.services.join(", ");
+
+    // Build the URL-encoded payload Netlify Forms expects.
+    var form = document.getElementById('quoteForm');
+    var fd = new FormData(form);
+    var pairs = [];
+    fd.forEach(function(v, k){ pairs.push(encodeURIComponent(k) + "=" + encodeURIComponent(v)); });
+    var payload = pairs.join("&");
+
+    function showSuccess(){
+      form.style.display = "none";
+      document.getElementById('steps').style.display = "none";
+      document.getElementById('qDone').classList.add('show');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending…";
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: payload
+    }).then(function(){
+      showSuccess();
+    }).catch(function(){
+      // Network/preview fallback: still confirm to the user and email the lead.
+      showSuccess();
+      var body =
+        "New Free Quote Request\n\n" +
+        "State: " + data.state + "\n" +
+        "Property Type: " + data.property + "\n" +
+        "Services: " + data.services.join(", ") + "\n\n" +
+        "Name: " + val('firstName') + " " + val('lastName') + "\n" +
+        "Email: " + val('email') + "\n" +
+        "Phone: " + val('phone') + "\n\n" +
+        "Address: " + val('street') + ", " + val('city') + " " + val('zip');
+      var subject = "Free Quote Request — " + val('firstName') + " " + val('lastName') + " (" + data.state + ")";
+      window.location.href = "mailto:info@clearandcleanwindowcleaning.com?subject=" +
+        encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    });
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>
