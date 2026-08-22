@@ -2,13 +2,13 @@
    Rise Window Cleaning — homepage styles
    ============================================================ */
 :root{
-  --orange:#f1b69f;
-  --orange-bright:#ffd0bd;
-  --orange-deep:#de9478;
-  --ink:#0d1d4d;          /* Clear & Clean navy */
-  --black:#07112e;
-  --paper:#f3f3f1;        /* light sections */
-  --cream:#f5e4dc;
+  --orange:#2f6fed;
+  --orange-bright:#5b8df7;
+  --orange-deep:#1748ad;
+  --ink:#071b40;
+  --black:#04112a;
+  --paper:#f7f9fe;
+  --cream:#eaf1ff;
   --white:#fff;
   --muted:#c7c7c7;        /* muted text on dark */
   --maxw:1180px;
@@ -64,8 +64,8 @@ a{color:inherit;text-decoration:none;}
 }
 .btn-dark::after{background:linear-gradient(100deg,transparent 0%,rgba(255,255,255,.28) 50%,transparent 100%);}
 @media(prefers-reduced-motion:reduce){.btn:hover::after{animation:none;}}
-.btn-orange{background:var(--orange);color:#1a1205;box-shadow:0 10px 30px -10px rgba(251,176,60,.7);}
-.btn-orange:hover{background:var(--orange-bright);transform:translateY(-2px);box-shadow:0 16px 38px -12px rgba(251,176,60,.85);}
+.btn-orange{background:var(--orange);color:#fff;box-shadow:0 10px 30px -10px rgba(47,111,237,.58);}
+.btn-orange:hover{background:var(--orange-bright);transform:translateY(-2px);box-shadow:0 16px 38px -12px rgba(47,111,237,.72);}
 .btn-white{background:var(--white);color:#111;}
 .btn-white:hover{transform:translateY(-2px);box-shadow:0 14px 32px -14px rgba(0,0,0,.5);}
 .btn-dark{background:#111;color:#fff;}
@@ -187,16 +187,16 @@ a{color:inherit;text-decoration:none;}
   font-size:clamp(22px,3.4vw,38px);text-shadow:0 4px 22px rgba(0,0,0,.55);
 }
 .svc:hover img{transform:scale(1.07);}
-.svc:hover::after{background:linear-gradient(180deg,rgba(251,176,60,.12) 0%,rgba(0,0,0,.15) 45%,rgba(0,0,0,.5) 100%);}
+.svc:hover::after{background:linear-gradient(180deg,rgba(47,111,237,.14) 0%,rgba(0,0,0,.15) 45%,rgba(0,0,0,.5) 100%);}
 
 /* ---------- MEMBERSHIPS ---------- */
 .memberships{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(22px,3vw,40px);}
 .coupon{
   width:300px;max-width:88vw;border-radius:30px;overflow:hidden;
-  background:#fff;box-shadow:0 30px 60px -26px rgba(251,176,60,.45),0 0 0 1px rgba(255,255,255,.04);
+  background:#fff;box-shadow:0 30px 60px -26px rgba(47,111,237,.4),0 0 0 1px rgba(255,255,255,.04);
   transition:transform .25s ease,box-shadow .3s ease;
 }
-.coupon:hover{transform:translateY(-8px);box-shadow:0 40px 70px -24px rgba(251,176,60,.6);}
+.coupon:hover{transform:translateY(-8px);box-shadow:0 40px 70px -24px rgba(47,111,237,.55);}
 .coupon__top{
   background:linear-gradient(180deg,var(--orange-bright) 0%,var(--orange-deep) 100%);
   padding:38px 26px 30px;text-align:center;color:#fff;

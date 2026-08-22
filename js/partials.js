@@ -35,10 +35,10 @@
   var footer =
 '<section class="foot-cta" data-screen-label="Footer CTA">' +
 '  <div class="wrap">' +
-'    <p class="eyebrow" data-reveal>Schedule Your Next Clean</p>' +
-'    <h2 class="display display--md accent" data-reveal data-d="1">Today<span style="color:#fff;">!</span></h2>' +
-'    <p data-reveal data-d="1">We are so confident in the work we do, that if you aren\'t 100% satisfied, we will refund you every single penny… sound fair enough?</p>' +
-'    <a class="btn btn-orange btn-lg" href="/contact" data-reveal data-d="2">Free Quote</a>' +
+'    <p class="eyebrow" data-reveal>Clear Windows Start Here</p>' +
+'    <h2 class="display display--md accent" data-reveal data-d="1">Get A Quote<span style="color:#fff;">.</span></h2>' +
+'    <p data-reveal data-d="1">Simple pricing. Professional service.</p>' +
+'    <a class="btn btn-orange btn-lg" href="/contact" data-reveal data-d="2">Instant Quote</a>' +
 '  </div>' +
 '</section>' +
 '<footer class="footer">' +
