@@ -90,7 +90,7 @@ a{color:inherit;text-decoration:none;}
 }
 .nav.scrolled .nav__inner{background:rgba(18,18,18,.34);box-shadow:0 16px 44px -16px rgba(0,0,0,.55);}
 .nav__logo{flex:0 0 auto;}
-.nav__logo img{height:34px;width:auto;display:block;}
+.nav__logo img{height:48px;width:auto;display:block;}
 .nav__links{display:flex;align-items:center;gap:clamp(18px,2.4vw,34px);}
 .nav__link{
   font-weight:800;text-transform:uppercase;letter-spacing:.05em;font-size:15px;color:#fff;
@@ -326,5 +326,5 @@ a{color:inherit;text-decoration:none;}
   .footer__grid{grid-template-columns:1fr;}
   .coupon{width:100%;max-width:360px;}
   .nav__inner{padding:10px 12px 10px 18px;}
-  .nav__logo img{height:30px;}
+  .nav__logo img{height:40px;}
 }
