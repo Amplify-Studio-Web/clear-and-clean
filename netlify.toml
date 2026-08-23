@@ -29,17 +29,7 @@
 
 # Retired template routes now lead visitors into the DFW site.
 [[redirects]]
-  from = "/window-cleaning-*-co"
-  to = "/locations"
-  status = 301
-
-[[redirects]]
-  from = "/window-cleaning-*-ar"
-  to = "/locations"
-  status = 301
-
-[[redirects]]
-  from = "/window-cleaning-*-mo"
+  from = "/window-cleaning/*"
   to = "/locations"
   status = 301
 
