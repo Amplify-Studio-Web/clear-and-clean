@@ -26,3 +26,39 @@
   for = "/js/*"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
+
+# Retired template routes now lead visitors into the DFW site.
+[[redirects]]
+  from = "/window-cleaning-*-co"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/window-cleaning-*-ar"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/window-cleaning-*-mo"
+  to = "/locations"
+  status = 301
+
+[[redirects]]
+  from = "/gutter-cleaning"
+  to = "/exterior-window-cleaning"
+  status = 301
+
+[[redirects]]
+  from = "/solar-panel-cleaning"
+  to = "/exterior-window-cleaning"
+  status = 301
+
+[[redirects]]
+  from = "/screen-repair"
+  to = "/screen-cleaning"
+  status = 301
+
+[[redirects]]
+  from = "/partnerships"
+  to = "/business-info"
+  status = 301

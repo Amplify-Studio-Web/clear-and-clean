@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://thebigrise.com/sitemap.xml
+Sitemap: https://clearandcleanwindowcleaning.com/sitemap.xml

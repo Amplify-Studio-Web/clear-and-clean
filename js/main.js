@@ -12,6 +12,7 @@
   var panel = document.getElementById("navPanel");
 
   function onScroll() {
+    if (!nav) return;
     if (window.scrollY > 30) nav.classList.add("scrolled");
     else nav.classList.remove("scrolled");
   }
@@ -19,7 +20,7 @@
   onScroll();
 
   function closeMenu() {
-    nav.classList.remove("open");
+    if (nav) nav.classList.remove("open");
     document.body.style.overflow = "";
     if (burger) burger.setAttribute("aria-expanded", "false");
   }
@@ -59,27 +60,94 @@
     });
   });
 
-  // ---- Scroll reveal (visible-by-default; hide-then-reveal as enhancement) ----
+  // ---- Site-wide scroll reveal ----
+  // Add reveal behavior to the shared page building blocks so every page has
+  // the same motion rhythm without requiring animation markup in every file.
+  function addReveal(el, index) {
+    if (!el || el.hasAttribute("data-reveal")) return;
+    el.setAttribute("data-reveal", "");
+    if (index % 4) el.setAttribute("data-d", String(index % 4));
+  }
+
+  [
+    ".hero__content",
+    ".page-hero > .wrap",
+    ".sec-head",
+    ".proof",
+    ".service-pair",
+    ".services-grid",
+    ".service-overview-grid",
+    ".home-review-grid",
+    ".business-info-grid",
+    ".values",
+    ".steps",
+    ".plans",
+    ".reviews-grid",
+    ".svc-related",
+    ".svc-faq",
+    ".about-grid",
+    ".about-duo",
+    ".loc__row",
+    ".contact-grid",
+    ".footer__grid"
+  ].forEach(function (selector) {
+    document.querySelectorAll(selector).forEach(function (group) {
+      Array.prototype.forEach.call(group.children, addReveal);
+    });
+  });
+
+  document.querySelectorAll([
+    ".city-map",
+    ".about-intro > *",
+    ".center-cta",
+    ".simple-cta > *",
+    ".footer__bottom",
+    ".panel.is-active > *"
+  ].join(",")).forEach(function (el, index) { addReveal(el, index); });
+
+  // Safety net: every content section receives at least one reveal target,
+  // including future pages that use a new component class.
+  document.querySelectorAll("section").forEach(function (section) {
+    if (section.querySelector("[data-reveal]")) return;
+    var container = section.querySelector(":scope > .wrap") || section;
+    Array.prototype.forEach.call(container.children, addReveal);
+  });
+
+  // Visible-by-default; hide-then-reveal only when motion is allowed.
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var items = Array.prototype.slice.call(document.querySelectorAll("[data-reveal]"));
 
   if (!reduce) {
-    // Arm: hide everything, then reveal what's in view (animates) and let the
-    // rest reveal on scroll. Visible state is the CSS default, so anything that
-    // never gets toggled simply stays visible.
     items.forEach(function (el) { el.classList.add("is-pre"); });
 
-    var reveal = function () {
+    var revealVisible = function () {
       var vh = window.innerHeight || document.documentElement.clientHeight;
       items.forEach(function (el) {
         if (!el.classList.contains("is-pre")) return;
         var r = el.getBoundingClientRect();
-        if (r.top < vh * 0.9 && r.bottom > 0) el.classList.remove("is-pre");
+        if (r.top < vh * 0.94 && r.bottom > 0) el.classList.remove("is-pre");
       });
     };
-    reveal();
-    window.addEventListener("scroll", reveal, { passive: true });
-    window.addEventListener("resize", reveal, { passive: true });
+
+    if ("IntersectionObserver" in window) {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.remove("is-pre");
+          observer.unobserve(entry.target);
+        });
+      }, { threshold: 0.08, rootMargin: "0px" });
+      items.forEach(function (el) { observer.observe(el); });
+    } else {
+      window.addEventListener("scroll", revealVisible, { passive: true });
+      window.addEventListener("resize", revealVisible, { passive: true });
+    }
+
+    // Let the browser paint the starting state before revealing above-the-fold
+    // content so the page entrance animates as consistently as later sections.
+    requestAnimationFrame(function () {
+      requestAnimationFrame(revealVisible);
+    });
 
     // Frozen-clock / no-paint safety: anything already in the viewport must be
     // shown even if transitions can't progress. Snap it on instantly.

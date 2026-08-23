@@ -10,18 +10,32 @@
   <meta property="og:title" content="Clear & Clean Window Cleaning | DFW">
   <meta property="og:description" content="Clear glass. Simple service.">
   <meta property="og:image" content="images/clear-clean/hero-truck.webp">
-  <link rel="icon" href="images/clear-clean/logo-mark.webp">
+  <link rel="icon" href="images/clear-clean/favicon-circle.png?v=20260822d">
   <link rel="stylesheet" href="css/fonts.css?v=20260822">
-  <link rel="stylesheet" href="css/styles.css?v=20260822">
+  <link rel="stylesheet" href="css/styles.css?v=20260822l">
   <style>
     .hero__media img{width:100%;height:100%;object-fit:cover}.hero__media:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,17,42,.88),rgba(4,17,42,.22))}
     .hero__content{max-width:900px}.hero__content p{max-width:610px}
-    .proof{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#dce5f6;border:1px solid #dce5f6;border-radius:22px;overflow:hidden;margin-top:40px}.proof article{background:#fff;padding:28px}.proof h3{font-size:20px;text-transform:uppercase;margin:0 0 6px}.proof p{margin:0;color:#526079}
-    .service-pair{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}.service-pair .svc{aspect-ratio:16/11}
+    .service-pair{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.service-pair .svc{aspect-ratio:4/5}
+    .home-service-card .svc__label{inset:0;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;font-size:clamp(24px,3vw,36px)}
+    .home-service-card .svc__info{position:absolute;z-index:2;left:28px;right:28px;bottom:72px;color:#fff;text-align:center;font-size:var(--body-copy-size);font-weight:600;line-height:1.4;opacity:0;transform:translateY(10px);transition:opacity .3s ease,transform .3s ease;text-shadow:0 2px 14px rgba(0,0,0,.6)}
+    .home-service-card .svc__arrow{position:absolute;z-index:3;right:22px;bottom:22px;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#fff;color:#071b40;font-size:23px;font-weight:900;transition:background .25s,color .25s,transform .25s}
+    .home-service-card:hover .svc__info,.home-service-card:focus-visible .svc__info{opacity:1;transform:none}
+    .home-service-card:hover .svc__arrow,.home-service-card:focus-visible .svc__arrow{background:#78a8ff;transform:translate(2px,-2px)}
+    .home-service-card:focus-visible{outline:3px solid #78a8ff;outline-offset:4px}
+    .home-reviews{padding-top:0}.home-reviews .wrap{border-top:1px solid rgba(255,255,255,.12);padding-top:var(--section-space)}
+    .home-review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .home-review{display:flex;flex-direction:column;min-height:270px;padding:30px;border:1px solid rgba(255,255,255,.12);border-radius:22px;background:rgba(255,255,255,.05)}
+    .home-review__stars{color:#78a8ff;font-size:18px;letter-spacing:.16em;margin-bottom:22px}
+    .home-review blockquote{font-size:var(--body-copy-size);font-weight:500;line-height:1.6;margin:0 0 26px;color:#fff}
+    .home-review cite{margin-top:auto;color:#78a8ff;font-style:normal;font-weight:800;text-transform:uppercase;letter-spacing:.04em}
+    .home-reviews__cta{text-align:center;margin-top:36px}
     .area-layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);gap:48px;align-items:start}.area-map{min-height:520px;border-radius:24px;overflow:hidden;background:#0d2c63;box-shadow:0 24px 50px -28px rgba(0,0,0,.7)}.area-map iframe{width:100%;height:520px;border:0;filter:saturate(.75)}
     .area-list{display:grid;gap:0}.area-group{padding:23px 0;border-top:1px solid rgba(255,255,255,.14)}.area-group:last-child{border-bottom:1px solid rgba(255,255,255,.14)}.area-group h3{margin:0 0 10px;color:#8fb4ff;text-transform:uppercase;font-size:20px}.area-group p{margin:0;color:#c4cee0;line-height:1.55}
+    .area-section .acc__item{border-color:#d7deea}.area-section .acc__item:first-child{border-top-color:#d7deea}.area-section .acc__head{color:#141414}.area-section .acc__cities li{color:#526079}
     .simple-cta{text-align:center;max-width:780px;margin:auto}.simple-cta p{font-size:20px;line-height:1.5;margin:18px auto 30px;max-width:600px}
-    @media(max-width:800px){.proof,.service-pair,.area-layout{grid-template-columns:1fr}.area-map,.area-map iframe{min-height:390px;height:390px}.proof{gap:1px}}
+    @media(max-width:800px){.service-pair,.home-review-grid,.area-layout{grid-template-columns:1fr}.area-map,.area-map iframe{min-height:390px;height:390px}.home-review{min-height:0}}
+    @media(hover:none){.home-service-card .svc__info{opacity:1;transform:none}}
   </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","name":"Clear & Clean Window Cleaning","url":"https://clearandcleanwindowcleaning.com/","telephone":"+1-972-890-5467","email":"info@clearandcleanwindowcleaning.com","areaServed":"Dallas–Fort Worth Metroplex","priceRange":"$$"}</script>
 </head>
@@ -34,53 +48,55 @@
       <p class="eyebrow">DFW Window Cleaning</p>
       <h1>Clear Glass.<br>Simple Service.</h1>
       <p>Professional window cleaning for DFW homes and businesses.</p>
-      <div><a class="btn btn-orange btn-lg" href="/contact">Instant Quote</a> <a class="btn btn-white btn-lg" href="tel:+19728905467">972-890-5467</a></div>
-    </div>
-  </section>
-
-  <section class="section section--light">
-    <div class="wrap">
-      <div class="sec-head"><p class="eyebrow">Why Clear & Clean</p><h2 class="display">Done Right<span class="dot">.</span></h2></div>
-      <div class="proof">
-        <article><h3>292 Five-Star Reviews</h3><p>Trusted across DFW.</p></article>
-        <article><h3>7-Day Guarantee</h3><p>We make it right.</p></article>
-        <article><h3>Fully Insured</h3><p>Professional and dependable.</p></article>
-      </div>
+      <div><a class="btn btn-orange btn-lg" href="/contact">FREE QUOTE</a> <a class="btn btn-white btn-lg" href="tel:+19728905467">CALL US</a></div>
     </div>
   </section>
 
   <section class="section section--ink">
     <div class="wrap">
-      <div class="sec-head"><p class="eyebrow">Residential & Commercial</p><h2 class="display accent">Window Cleaning</h2></div>
+      <div class="sec-head"><p class="eyebrow">Clear & Clean · DFW</p><h2 class="display accent">Our Services</h2></div>
       <div class="service-pair">
-        <a class="svc" href="/exterior-window-cleaning"><img src="images/clear-clean/exterior.webp" alt="Exterior window cleaning in DFW"><span class="svc__label">Exterior<br>Cleaning</span></a>
-        <a class="svc" href="/interior-window-cleaning"><img src="images/clear-clean/interior.webp" alt="Interior window cleaning in DFW"><span class="svc__label">Interior<br>Cleaning</span></a>
+        <a class="svc home-service-card" href="/exterior-window-cleaning"><img src="images/clear-clean/exterior.webp" alt="Exterior window cleaning in DFW"><span class="svc__label">Exterior<br>Cleaning</span><span class="svc__info">Streak-free exterior glass and detailed edges.</span><span class="svc__arrow" aria-hidden="true">↗</span></a>
+        <a class="svc home-service-card" href="/interior-window-cleaning"><img src="images/clear-clean/interior.webp" alt="Interior window cleaning in DFW"><span class="svc__label">Interior<br>Cleaning</span><span class="svc__info">Careful interior service around your home or business.</span><span class="svc__arrow" aria-hidden="true">↗</span></a>
+        <a class="svc home-service-card" href="/commercial-window-cleaning"><img src="images/clear-clean/gallery-1.webp" alt="Commercial window cleaning in DFW"><span class="svc__label">Commercial<br>Cleaning</span><span class="svc__info">Reliable storefront, office, and property care.</span><span class="svc__arrow" aria-hidden="true">↗</span></a>
       </div>
     </div>
   </section>
 
-  <section class="section section--black">
+  <section class="section section--ink home-reviews">
+    <div class="wrap">
+      <div class="sec-head"><p class="eyebrow">4.9 Stars · 292 Verified Reviews</p><h2 class="display accent">Customer Reviews</h2></div>
+      <div class="home-review-grid">
+        <article class="home-review"><div class="home-review__stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“Always conscientious, careful, and very thorough. We will definitely be using them again.”</blockquote><cite>Bert Williams</cite></article>
+        <article class="home-review"><div class="home-review__stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“Friendly, professional, and solid work ethic. Our windows look fantastic!”</blockquote><cite>Nicole Marenic</cite></article>
+        <article class="home-review"><div class="home-review__stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“Great communication from beginning to end. Clear & Clean will definitely be my go-to.”</blockquote><cite>Janell Starnes</cite></article>
+      </div>
+      <div class="home-reviews__cta"><a class="btn btn-orange" href="/reviews">READ ALL REVIEWS</a></div>
+    </div>
+  </section>
+
+  <section class="section section--light area-section">
     <div class="wrap">
       <div class="sec-head"><p class="eyebrow">Collin · Dallas · Denton · Tarrant</p><h2 class="display accent">Proudly Serving DFW</h2></div>
-      <div class="area-layout">
-        <div class="area-map"><iframe title="Clear & Clean DFW service area map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Dallas%20Fort%20Worth%20Metroplex&amp;z=8&amp;output=embed"></iframe></div>
-        <div class="area-list">
-          <div class="area-group"><h3>Dallas County</h3><p>Dallas · University Park · Highland Park · Coppell</p></div>
-          <div class="area-group"><h3>Collin County</h3><p>Plano · Frisco · McKinney · Prosper · Celina</p></div>
-          <div class="area-group"><h3>Denton County</h3><p>Denton · Lewisville · Flower Mound · The Colony</p></div>
-          <div class="area-group"><h3>Tarrant County</h3><p>Fort Worth · Grapevine · Southlake · Colleyville</p></div>
-          <p style="margin-top:28px"><a class="btn btn-orange" href="/contact">Check Your Address</a></p>
+      <div class="locations">
+        <div class="loc">
+          <div class="loc__row">
+            <div class="loc__map"><iframe title="Clear & Clean DFW service area map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=32.8998,-97.0403&amp;z=9&amp;output=embed"></iframe></div>
+            <div class="acc">
+              <div class="acc__item"><button class="acc__head" type="button" aria-expanded="false"><svg class="acc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg><span>Dallas County</span></button><div class="acc__body"><div><ul class="acc__cities"><li><a href="/window-cleaning-dallas-tx">Dallas</a></li><li><a href="/window-cleaning-carrollton-tx">Carrollton</a></li><li><a href="/window-cleaning-coppell-tx">Coppell</a></li></ul></div></div></div>
+              <div class="acc__item"><button class="acc__head" type="button" aria-expanded="false"><svg class="acc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg><span>Collin County</span></button><div class="acc__body"><div><ul class="acc__cities"><li><a href="/window-cleaning-plano-tx">Plano</a></li><li><a href="/window-cleaning-frisco-tx">Frisco</a></li><li><a href="/window-cleaning-mckinney-tx">McKinney</a></li><li><a href="/window-cleaning-prosper-tx">Prosper</a></li><li><a href="/window-cleaning-celina-tx">Celina</a></li></ul></div></div></div>
+              <div class="acc__item"><button class="acc__head" type="button" aria-expanded="false"><svg class="acc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg><span>Denton County</span></button><div class="acc__body"><div><ul class="acc__cities"><li><a href="/window-cleaning-denton-tx">Denton</a></li><li><a href="/window-cleaning-lewisville-tx">Lewisville</a></li><li><a href="/window-cleaning-flower-mound-tx">Flower Mound</a></li></ul></div></div></div>
+              <div class="acc__item"><button class="acc__head" type="button" aria-expanded="false"><svg class="acc__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg><span>Tarrant County</span></button><div class="acc__body"><div><ul class="acc__cities"><li><a href="/window-cleaning-fort-worth-tx">Fort Worth</a></li><li><a href="/window-cleaning-grapevine-tx">Grapevine</a></li><li><a href="/window-cleaning-southlake-tx">Southlake</a></li><li><a href="/window-cleaning-colleyville-tx">Colleyville</a></li></ul></div></div></div>
+              <p style="margin-top:28px"><a class="btn btn-orange" href="/locations">VIEW ALL LOCATIONS</a></p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section section--cream">
-    <div class="wrap simple-cta"><p class="eyebrow">Ready When You Are</p><h2 class="display">See The Difference<span class="dot">.</span></h2><p>Fast quotes. Clear pricing. Beautiful results.</p><a class="btn btn-orange btn-lg" href="/contact">Get My Quote</a></div>
-  </section>
-
   <div id="site-footer"></div>
-  <script src="js/partials.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/partials.js?v=20260822i"></script>
+  <script src="js/main.js?v=20260822e"></script>
 </body>
 </html>
