@@ -13,7 +13,7 @@
 '    </div>' +
 '    <div class="nav__cta">' +
 '      <a class="btn btn-orange" href="/contact">FREE QUOTE</a>' +
-'      <a class="btn btn-white" href="tel:+19728902370">CALL US</a>' +
+'      <a class="btn btn-white" href="tel:+19728905467">CALL US</a>' +
 '    </div>' +
 '    <button class="nav__burger" id="burger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>' +
 '  </nav>' +
@@ -24,7 +24,7 @@
 '      <a href="/locations">Locations</a>' +
 '      <a href="/business-info">Business Info</a>' +
 '      <a class="btn btn-orange" href="/contact">FREE QUOTE</a>' +
-'      <a class="btn btn-white" href="tel:+19728902370">CALL US</a>' +
+'      <a class="btn btn-white" href="tel:+19728905467">CALL US</a>' +
 '  </div>' +
 '</header>';
 
@@ -50,7 +50,7 @@
 '          <a href="https://www.instagram.com/clearandcleanwindowcleaning/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>' +
 '        </div>' +
 '        <a href="mailto:max@clearandcleanwindowcleaning.com">' + mail + ' max@clearandcleanwindowcleaning.com</a>' +
-'        <a href="tel:+19728902370">' + phone + ' (972) 890-2370</a>' +
+'        <a href="tel:+19728905467">' + phone + ' (972) 890-5467</a>' +
 '      </div>' +
 '      <div class="foot-col">' +
 '        <h4 class="foot-h">Company</h4>' +

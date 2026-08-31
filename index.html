@@ -15,12 +15,33 @@
   <link rel="stylesheet" href="css/styles.css?v=20260830-mobile3">
   <script src="https://elfsightcdn.com/platform.js" async></script>
   <style>
+    /* First-visit service selection */
+    .service-split{position:fixed;inset:0;z-index:1000;display:grid;grid-template-columns:1fr 1fr;color:#fff;background:#071b40;overflow:auto;}
+    .service-split[hidden]{display:none;}
+    .service-split__brand{position:absolute;z-index:2;top:clamp(24px,4vw,54px);left:50%;transform:translateX(-50%);}
+    .service-split__brand img{width:clamp(150px,19vw,250px);display:block;filter:brightness(0) invert(1);}
+    .service-split__choice{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;isolation:isolate;overflow:hidden;text-decoration:none;}
+    .service-split__choice::before{content:"";position:absolute;inset:-6%;z-index:-1;background:center/cover no-repeat;transition:transform .65s cubic-bezier(.2,.75,.2,1);}
+    .service-split__choice--windows::before{background-image:linear-gradient(180deg,rgba(218,237,255,.2),rgba(120,168,255,.48)),url('images/clear-clean/hero-truck.webp');}
+    .service-split__choice--windows .service-split__content{text-shadow:0 3px 20px rgba(7,27,64,.58);}
+    .service-split__choice--lights::before{background-image:linear-gradient(180deg,rgba(7,27,64,.7),rgba(2,12,30,.94)),url('images/services/holiday-lighting-hero.webp');}
+    .service-split__choice:hover::before,.service-split__choice:focus-visible::before{transform:scale(1.08);}
+    .service-split__content{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center;padding:110px 24px 46px;}
+    .service-split__kicker{margin:0 0 22px;font-size:13px;font-weight:900;letter-spacing:.26em;text-transform:uppercase;}
+    .service-split__choice--lights .service-split__kicker{color:var(--orange);}
+    .service-split h1{margin:0;color:#fff;font-size:clamp(46px,6.4vw,96px);line-height:.84;text-transform:uppercase;letter-spacing:-.045em;}
+    .service-split__lights-word{display:block;color:var(--orange);}
+    .service-split .btn{min-width:168px;margin-top:34px;}
+    .service-split__choice--lights .btn{background:var(--orange);border-color:var(--orange);color:var(--ink);box-shadow:0 12px 30px rgba(120,168,255,.34);}
+    body:has(.service-split:not([hidden])){overflow:hidden;}
+    @media(max-width:700px){.service-split{display:block;overflow:hidden;}.service-split__choice{min-height:0;height:50svh;}.service-split__brand{top:clamp(22px,4vw,34px);}.service-split__brand img{width:clamp(126px,37vw,174px);}.service-split__content{padding:82px 20px 22px;}.service-split h1{font-size:clamp(40px,12vw,62px);}.service-split__kicker{margin-bottom:14px;font-size:11px;}.service-split .btn{min-width:164px;min-height:52px;margin-top:22px;font-size:15px;}}
     .hero__media img{width:100%;height:100%;object-fit:cover}.hero__media:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,17,42,.88),rgba(4,17,42,.22))}
     .hero__content{max-width:900px}.hero__content p{max-width:610px}
     .hero__eyebrow{margin:0 auto 18px}.hero__proof{margin:12px auto 24px;font-size:clamp(16px,1.7vw,20px)}.hero__proof strong{font-weight:900}
     .service-pair{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.service-pair .svc{aspect-ratio:4/5}
     .home-service-card .svc__label{inset:0;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;font-size:clamp(24px,3vw,36px)}
     .home-service-card .svc__info{position:absolute;z-index:2;left:28px;right:28px;bottom:72px;color:#fff;text-align:center;font-size:var(--body-copy-size);font-weight:600;line-height:1.4;opacity:0;transform:translateY(10px);transition:opacity .3s ease,transform .3s ease;text-shadow:0 2px 14px rgba(0,0,0,.6)}
+    .plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1180px;margin:0 auto;align-items:stretch}.plan-card{position:relative;display:flex;flex-direction:column;padding:clamp(28px,3.2vw,42px);border:1px solid #d9e6f4;border-radius:24px;background:#fff;color:var(--ink);box-shadow:0 18px 45px -34px rgba(7,27,64,.45)}.plan-card--popular{border:2px solid var(--orange);box-shadow:0 22px 48px -30px rgba(7,27,64,.48)}.plan-card__tag{position:absolute;top:-15px;left:50%;transform:translateX(-50%);white-space:nowrap;padding:8px 18px;border-radius:999px;background:var(--orange);color:var(--ink);font-size:12px;font-weight:900;letter-spacing:.04em;text-transform:uppercase}.plan-card h3{text-align:center;margin:0 0 24px;font-size:clamp(25px,2.7vw,38px);line-height:1;text-transform:uppercase}.plan-card__saving{text-align:center;margin:0;color:var(--ink);font-weight:900;font-size:clamp(38px,4.5vw,58px);letter-spacing:-.06em;line-height:1}.plan-card__saving-note{text-align:center;margin:7px 0 28px;color:#85a1c9;font-size:13px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}.plan-features{display:flex;flex-direction:column;gap:14px;list-style:none;margin:0 0 30px;padding:0}.plan-features li{position:relative;padding-left:30px;font-size:16px;font-weight:650;line-height:1.35}.plan-features li::before{content:"✓";position:absolute;left:0;top:0;display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--orange);color:var(--ink);font-weight:900;font-size:13px}.plan-features .is-unavailable{color:#75839a}.plan-features .is-unavailable::before{content:"×";background:#dfe5ed;color:#7a8797;font-size:17px}.plan-card .btn{margin-top:auto;width:100%;justify-content:center}.plan-card__detail{display:block;margin-top:16px;text-align:center;color:#5d6e89;font-weight:800;font-size:14px}
     .home-service-card .svc__arrow{position:absolute;z-index:3;right:22px;bottom:22px;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#fff;color:#071b40;font-size:23px;font-weight:900;transition:background .25s,color .25s,transform .25s}
     .home-service-card:hover .svc__info,.home-service-card:focus-visible .svc__info{opacity:1;transform:none}
     .home-service-card:hover .svc__arrow,.home-service-card:focus-visible .svc__arrow{background:#78a8ff;transform:translate(2px,-2px)}
@@ -36,13 +57,22 @@
     .area-list{display:grid;gap:0}.area-group{padding:23px 0;border-top:1px solid rgba(255,255,255,.14)}.area-group:last-child{border-bottom:1px solid rgba(255,255,255,.14)}.area-group h3{margin:0 0 10px;color:#8fb4ff;text-transform:uppercase;font-size:20px}.area-group p{margin:0;color:#c4cee0;line-height:1.55}
     .area-section .acc__item{border-color:#d7deea}.area-section .acc__item:first-child{border-top-color:#d7deea}.area-section .acc__head{color:#141414}.area-section .acc__cities li{color:#526079}
     .simple-cta{text-align:center;max-width:780px;margin:auto}.simple-cta p{font-size:20px;line-height:1.5;margin:18px auto 30px;max-width:600px}
-    @media(max-width:800px){.service-pair,.home-review-grid,.area-layout{grid-template-columns:1fr}.area-map,.area-map iframe{min-height:390px;height:390px}.home-review{min-height:0}}
-    @media(max-width:640px){.hero__content .hero__eyebrow{max-width:31ch;margin-bottom:10px}.hero__content .hero__intro{max-width:27ch;margin-top:16px;margin-bottom:12px}.hero__content .hero__proof{max-width:28ch;margin-top:0;margin-bottom:22px}.service-pair{grid-template-columns:repeat(2,1fr);gap:12px}.service-pair .svc{aspect-ratio:1/.82}.home-service-card .svc__label{padding:14px;font-size:clamp(20px,5.5vw,26px)}.home-service-card .svc__info{display:none}.home-service-card .svc__arrow{right:14px;bottom:14px;width:36px;height:36px;font-size:19px}}
+    @media(max-width:800px){.service-pair,.home-review-grid,.area-layout{grid-template-columns:1fr}.plans-grid{grid-template-columns:1fr;max-width:480px}.area-map,.area-map iframe{min-height:390px;height:390px}.home-review{min-height:0}}
+    @media(max-width:640px){.hero__content .hero__eyebrow{max-width:31ch;margin-bottom:10px}.hero__content .hero__intro{max-width:27ch;margin-top:16px;margin-bottom:12px}.hero__content .hero__proof{max-width:28ch;margin-top:0;margin-bottom:22px}.service-pair{grid-template-columns:repeat(2,1fr);gap:12px}.service-pair .svc{aspect-ratio:1/.82}.home-service-card .svc__label{padding:14px;font-size:clamp(20px,5.5vw,26px)}.home-service-card .svc__info{display:none}.home-service-card .svc__arrow{right:14px;bottom:14px;width:36px;height:36px;font-size:19px}.plan-card{padding:30px 24px}.plan-features{align-items:flex-start}.plan-card h3,.plan-card__saving,.plan-card__saving-note{text-align:center}}
     @media(hover:none){.home-service-card .svc__info{opacity:1;transform:none}}
   </style>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","name":"Clear & Clean Window Cleaning","url":"https://clearandcleanwindowcleaning.com/","telephone":"+1-972-890-2370","email":"max@clearandcleanwindowcleaning.com","areaServed":"Dallas–Fort Worth Metroplex","priceRange":"$$"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","name":"Clear & Clean Window Cleaning","url":"https://clearandcleanwindowcleaning.com/","telephone":"+1-972-890-5467","email":"max@clearandcleanwindowcleaning.com","areaServed":"Dallas–Fort Worth Metroplex","priceRange":"$$"}</script>
 </head>
 <body>
+  <section class="service-split" id="serviceSplit" aria-label="Choose a Clear & Clean service">
+    <div class="service-split__brand"><img src="images/clear-clean/logo-wordmark.webp" alt="Clear & Clean Window Cleaning" /></div>
+    <a class="service-split__choice service-split__choice--windows" href="/?service=windows" aria-label="Enter Window Cleaning">
+      <div class="service-split__content"><p class="service-split__kicker">I need</p><h1>Window<br>Cleaning</h1><span class="btn btn-white btn-lg">ENTER <span aria-hidden="true">→</span></span></div>
+    </a>
+    <a class="service-split__choice service-split__choice--lights" href="/holiday-lighting" aria-label="Enter Holiday Lighting">
+      <div class="service-split__content"><p class="service-split__kicker">I need</p><h1>Holiday<span class="service-split__lights-word">Lighting</span></h1><span class="btn btn-lg">ENTER <span aria-hidden="true">→</span></span></div>
+    </a>
+  </section>
   <div id="site-nav"></div>
 
   <section class="hero">
@@ -51,7 +81,7 @@
       <h1>Clear Glass.<br>Simple Service.</h1>
       <p class="hero__intro">Professional window cleaning for homes and businesses across the DFW Metroplex.</p>
       <p class="hero__proof"><strong>5,000+ jobs completed</strong> for DFW homes and businesses.</p>
-      <div><a class="btn btn-orange btn-lg" href="/contact">FREE QUOTE</a> <a class="btn btn-white btn-lg" href="tel:+19728902370">CALL US</a></div>
+      <div><a class="btn btn-orange btn-lg" href="/contact">FREE QUOTE</a> <a class="btn btn-white btn-lg" href="tel:+19728905467">CALL US</a></div>
     </div>
   </section>
 
@@ -65,6 +95,29 @@
         <a class="svc home-service-card" href="/screen-cleaning"><img src="images/clear-clean/gallery-2.webp" alt="Screen cleaning in DFW"><span class="svc__label">Screen<br>Cleaning</span><span class="svc__info">A detailed clean for clearer, fresher window screens.</span><span class="svc__arrow" aria-hidden="true">↗</span></a>
         <a class="svc home-service-card" href="/track-cleaning"><img src="images/clear-clean/gallery-3.webp" alt="Window track detailing in DFW"><span class="svc__label">Track<br>Detailing</span><span class="svc__info">Clean tracks, channels, sills, and corners.</span><span class="svc__arrow" aria-hidden="true">↗</span></a>
         <a class="svc home-service-card" href="/holiday-lighting"><img src="images/services/holiday-lighting-hero.webp" alt="Christmas light installation in DFW"><span class="svc__label">Christmas<br>Lights</span><span class="svc__info">Professional seasonal lighting from install to removal.</span><span class="svc__arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--light" id="service-plans">
+    <div class="wrap">
+      <div class="sec-head"><p class="eyebrow">Keep your glass clear</p><h2 class="display accent">Service Plans</h2><p>More consistent care, priority scheduling, and savings with every visit.</p></div>
+      <div class="plans-grid">
+        <article class="plan-card">
+          <h3>Monthly</h3><p class="plan-card__saving">$150 OFF</p><p class="plan-card__saving-note">Each Service</p>
+          <ul class="plan-features"><li>FREE RainDefense Tech</li><li>7-Day Rain Guarantee</li><li>FREE Mineral &amp; Hard Water Remediation</li><li>Priority Concierge Scheduling</li></ul>
+          <a class="btn btn-orange" href="/contact">GET A FREE QUOTE</a><span class="plan-card__detail">Monthly plan details</span>
+        </article>
+        <article class="plan-card plan-card--popular">
+          <span class="plan-card__tag">★ Most Popular</span><h3>Quarterly</h3><p class="plan-card__saving">$100 OFF</p><p class="plan-card__saving-note">Each Service</p>
+          <ul class="plan-features"><li>FREE RainDefense Tech</li><li>7-Day Rain Guarantee</li><li>FREE Mineral &amp; Hard Water Remediation</li><li>Priority Concierge Scheduling</li></ul>
+          <a class="btn btn-orange" href="/contact">GET A FREE QUOTE</a><span class="plan-card__detail">Quarterly plan details</span>
+        </article>
+        <article class="plan-card">
+          <h3>Seasonal</h3><p class="plan-card__saving">$50 OFF</p><p class="plan-card__saving-note">Each Service</p>
+          <ul class="plan-features"><li class="is-unavailable">FREE RainDefense Tech</li><li class="is-unavailable">7-Day Rain Guarantee</li><li class="is-unavailable">FREE Mineral &amp; Hard Water Remediation</li><li>Priority Concierge Scheduling</li></ul>
+          <a class="btn btn-orange" href="/contact">GET A FREE QUOTE</a><span class="plan-card__detail">Seasonal plan details</span>
+        </article>
       </div>
     </div>
   </section>
@@ -100,5 +153,6 @@
   <div id="site-footer"></div>
   <script src="js/partials.js?v=20260830-footer-social2"></script>
   <script src="js/main.js?v=20260822e"></script>
+  <script>if(new URLSearchParams(location.search).get('service')==='windows'){document.getElementById('serviceSplit').hidden=true;}</script>
 </body>
 </html>
