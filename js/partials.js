@@ -13,19 +13,18 @@
 '    </div>' +
 '    <div class="nav__cta">' +
 '      <a class="btn btn-orange" href="/contact">FREE QUOTE</a>' +
-'      <a class="btn btn-white" href="tel:+19728905467">CALL US</a>' +
+'      <a class="btn btn-white" href="tel:+19728902370">CALL US</a>' +
 '    </div>' +
 '    <button class="nav__burger" id="burger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>' +
 '  </nav>' +
 '  <div class="nav__panel" id="navPanel">' +
 '      <a href="/services">Services</a>' +
 '      <a href="/about-us">About Us</a>' +
-'      <a href="/reviews">Reviews</a>' +
-'      <a href="/pricing">Pricing</a>' +
+'      <a href="/faq">FAQ</a>' +
 '      <a href="/locations">Locations</a>' +
 '      <a href="/business-info">Business Info</a>' +
 '      <a class="btn btn-orange" href="/contact">FREE QUOTE</a>' +
-'      <a class="btn btn-white" href="tel:+19728905467">CALL US</a>' +
+'      <a class="btn btn-white" href="tel:+19728902370">CALL US</a>' +
 '  </div>' +
 '</header>';
 
@@ -46,8 +45,12 @@
 '    <div class="footer__grid">' +
 '      <div class="footer__brand foot-contact">' +
 '        <img class="foot-logo" src="images/clear-clean/logo-wordmark.webp" alt="Clear & Clean Window Cleaning" />' +
-'        <a href="mailto:info@clearandcleanwindowcleaning.com">' + mail + ' info@clearandcleanwindowcleaning.com</a>' +
-'        <a href="tel:+19728905467">' + phone + ' (972) 890-5467</a>' +
+'        <div class="foot-socials" aria-label="Follow Clear & Clean">' +
+'          <a href="https://www.facebook.com/clearandcleanwindowcleaning/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.6 1.6-1.6h1.7V3.8c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.4V10H7.3v3h2.8v8h3.4Z"/></svg></a>' +
+'          <a href="https://www.instagram.com/clearandcleanwindowcleaning/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>' +
+'        </div>' +
+'        <a href="mailto:max@clearandcleanwindowcleaning.com">' + mail + ' max@clearandcleanwindowcleaning.com</a>' +
+'        <a href="tel:+19728902370">' + phone + ' (972) 890-2370</a>' +
 '      </div>' +
 '      <div class="foot-col">' +
 '        <h4 class="foot-h">Company</h4>' +
@@ -55,7 +58,8 @@
 '          <li><a href="/contact">Contact</a></li>' +
 '          <li><a href="/about-us">About Us</a></li>' +
 '          <li><a href="/reviews">Reviews</a></li>' +
-'          <li><a href="/pricing">Pricing</a></li>' +
+'          <li><a href="/gallery">Gallery</a></li>' +
+'          <li><a href="/faq">FAQ</a></li>' +
 '          <li><a href="/business-info">Business Info</a></li>' +
 '        </ul>' +
 '      </div>' +

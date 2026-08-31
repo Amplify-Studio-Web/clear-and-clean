@@ -29,6 +29,11 @@
 
 # Retired template routes now lead visitors into the DFW site.
 [[redirects]]
+  from = "/pricing"
+  to = "/contact"
+  status = 301
+
+[[redirects]]
   from = "/window-cleaning-*"
   to = "/locations"
   status = 301

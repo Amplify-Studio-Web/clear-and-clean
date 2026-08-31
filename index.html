@@ -12,10 +12,12 @@
   <meta property="og:image" content="images/clear-clean/hero-truck.webp">
   <link rel="icon" href="images/clear-clean/favicon-circle.png?v=20260822d">
   <link rel="stylesheet" href="css/fonts.css?v=20260822">
-  <link rel="stylesheet" href="css/styles.css?v=20260822l">
+  <link rel="stylesheet" href="css/styles.css?v=20260830-mobile3">
+  <script src="https://elfsightcdn.com/platform.js" async></script>
   <style>
     .hero__media img{width:100%;height:100%;object-fit:cover}.hero__media:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,17,42,.88),rgba(4,17,42,.22))}
     .hero__content{max-width:900px}.hero__content p{max-width:610px}
+    .hero__eyebrow{margin:0 auto 18px}.hero__proof{margin:12px auto 24px;font-size:clamp(16px,1.7vw,20px)}.hero__proof strong{font-weight:900}
     .service-pair{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.service-pair .svc{aspect-ratio:4/5}
     .home-service-card .svc__label{inset:0;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;font-size:clamp(24px,3vw,36px)}
     .home-service-card .svc__info{position:absolute;z-index:2;left:28px;right:28px;bottom:72px;color:#fff;text-align:center;font-size:var(--body-copy-size);font-weight:600;line-height:1.4;opacity:0;transform:translateY(10px);transition:opacity .3s ease,transform .3s ease;text-shadow:0 2px 14px rgba(0,0,0,.6)}
@@ -35,9 +37,10 @@
     .area-section .acc__item{border-color:#d7deea}.area-section .acc__item:first-child{border-top-color:#d7deea}.area-section .acc__head{color:#141414}.area-section .acc__cities li{color:#526079}
     .simple-cta{text-align:center;max-width:780px;margin:auto}.simple-cta p{font-size:20px;line-height:1.5;margin:18px auto 30px;max-width:600px}
     @media(max-width:800px){.service-pair,.home-review-grid,.area-layout{grid-template-columns:1fr}.area-map,.area-map iframe{min-height:390px;height:390px}.home-review{min-height:0}}
+    @media(max-width:640px){.hero__content .hero__eyebrow{max-width:31ch;margin-bottom:10px}.hero__content .hero__intro{max-width:27ch;margin-top:16px;margin-bottom:12px}.hero__content .hero__proof{max-width:28ch;margin-top:0;margin-bottom:22px}.service-pair{grid-template-columns:repeat(2,1fr);gap:12px}.service-pair .svc{aspect-ratio:1/.82}.home-service-card .svc__label{padding:14px;font-size:clamp(20px,5.5vw,26px)}.home-service-card .svc__info{display:none}.home-service-card .svc__arrow{right:14px;bottom:14px;width:36px;height:36px;font-size:19px}}
     @media(hover:none){.home-service-card .svc__info{opacity:1;transform:none}}
   </style>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","name":"Clear & Clean Window Cleaning","url":"https://clearandcleanwindowcleaning.com/","telephone":"+1-972-890-5467","email":"info@clearandcleanwindowcleaning.com","areaServed":"Dallas–Fort Worth Metroplex","priceRange":"$$"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","name":"Clear & Clean Window Cleaning","url":"https://clearandcleanwindowcleaning.com/","telephone":"+1-972-890-2370","email":"max@clearandcleanwindowcleaning.com","areaServed":"Dallas–Fort Worth Metroplex","priceRange":"$$"}</script>
 </head>
 <body>
   <div id="site-nav"></div>
@@ -45,10 +48,10 @@
   <section class="hero">
     <div class="hero__media"><img src="images/clear-clean/hero-truck.webp" alt="Clear & Clean service truck at a DFW home"></div>
     <div class="hero__content wrap">
-      <p class="eyebrow">DFW Window Cleaning</p>
       <h1>Clear Glass.<br>Simple Service.</h1>
-      <p>Professional window cleaning for DFW homes and businesses.</p>
-      <div><a class="btn btn-orange btn-lg" href="/contact">FREE QUOTE</a> <a class="btn btn-white btn-lg" href="tel:+19728905467">CALL US</a></div>
+      <p class="hero__intro">Professional window cleaning for homes and businesses across the DFW Metroplex.</p>
+      <p class="hero__proof"><strong>5,000+ jobs completed</strong> for DFW homes and businesses.</p>
+      <div><a class="btn btn-orange btn-lg" href="/contact">FREE QUOTE</a> <a class="btn btn-white btn-lg" href="tel:+19728902370">CALL US</a></div>
     </div>
   </section>
 
@@ -59,19 +62,18 @@
         <a class="svc home-service-card" href="/exterior-window-cleaning"><img src="images/clear-clean/exterior.webp" alt="Exterior window cleaning in DFW"><span class="svc__label">Exterior<br>Cleaning</span><span class="svc__info">Streak-free exterior glass and detailed edges.</span><span class="svc__arrow" aria-hidden="true">↗</span></a>
         <a class="svc home-service-card" href="/interior-window-cleaning"><img src="images/clear-clean/interior.webp" alt="Interior window cleaning in DFW"><span class="svc__label">Interior<br>Cleaning</span><span class="svc__info">Careful interior service around your home or business.</span><span class="svc__arrow" aria-hidden="true">↗</span></a>
         <a class="svc home-service-card" href="/commercial-window-cleaning"><img src="images/clear-clean/gallery-1.webp" alt="Commercial window cleaning in DFW"><span class="svc__label">Commercial<br>Cleaning</span><span class="svc__info">Reliable storefront, office, and property care.</span><span class="svc__arrow" aria-hidden="true">↗</span></a>
+        <a class="svc home-service-card" href="/screen-cleaning"><img src="images/clear-clean/gallery-2.webp" alt="Screen cleaning in DFW"><span class="svc__label">Screen<br>Cleaning</span><span class="svc__info">A detailed clean for clearer, fresher window screens.</span><span class="svc__arrow" aria-hidden="true">↗</span></a>
+        <a class="svc home-service-card" href="/track-cleaning"><img src="images/clear-clean/gallery-3.webp" alt="Window track detailing in DFW"><span class="svc__label">Track<br>Detailing</span><span class="svc__info">Clean tracks, channels, sills, and corners.</span><span class="svc__arrow" aria-hidden="true">↗</span></a>
+        <a class="svc home-service-card" href="/holiday-lighting"><img src="images/services/holiday-lighting-hero.webp" alt="Christmas light installation in DFW"><span class="svc__label">Christmas<br>Lights</span><span class="svc__info">Professional seasonal lighting from install to removal.</span><span class="svc__arrow" aria-hidden="true">↗</span></a>
       </div>
     </div>
   </section>
 
   <section class="section section--ink home-reviews">
     <div class="wrap">
-      <div class="sec-head"><p class="eyebrow">4.9 Stars · 292 Verified Reviews</p><h2 class="display accent">Customer Reviews</h2></div>
-      <div class="home-review-grid">
-        <article class="home-review"><div class="home-review__stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“Always conscientious, careful, and very thorough. We will definitely be using them again.”</blockquote><cite>Bert Williams</cite></article>
-        <article class="home-review"><div class="home-review__stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“Friendly, professional, and solid work ethic. Our windows look fantastic!”</blockquote><cite>Nicole Marenic</cite></article>
-        <article class="home-review"><div class="home-review__stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“Great communication from beginning to end. Clear & Clean will definitely be my go-to.”</blockquote><cite>Janell Starnes</cite></article>
-      </div>
-      <div class="home-reviews__cta"><a class="btn btn-orange" href="/reviews">READ ALL REVIEWS</a></div>
+      <div class="sec-head"><h2 class="display accent">Customer Reviews</h2></div>
+      <div class="elfsight-app-1c62d4eb-199d-4a2b-b869-6203cfa921fa" data-elfsight-app-lazy></div>
+      <div class="home-reviews__cta"><a class="btn btn-orange" href="/contact">GET A FREE QUOTE</a></div>
     </div>
   </section>
 
@@ -96,7 +98,7 @@
   </section>
 
   <div id="site-footer"></div>
-  <script src="js/partials.js?v=20260822i"></script>
+  <script src="js/partials.js?v=20260830-footer-social2"></script>
   <script src="js/main.js?v=20260822e"></script>
 </body>
 </html>

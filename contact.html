@@ -12,7 +12,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Free Quote | Contact Clear & Clean Window Cleaning</title>
-<meta name="description" content="Get a fast, free window cleaning quote from Clear & Clean Window Cleaning. Serving Dallas–Fort Worth. Call (972) 890-5467 or request your quote online today!" />
+<meta name="description" content="Get a fast, free window cleaning quote from Clear & Clean Window Cleaning. Serving Dallas–Fort Worth. Call (972) 890-2370 or request your quote online today!" />
 <link rel="canonical" href="https://clearandcleanwindowcleaning.com/contact" />
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <meta name="author" content="Clear & Clean Window Cleaning" />
@@ -21,7 +21,7 @@
 <meta property="og:site_name" content="Clear & Clean Window Cleaning" />
 <meta property="og:locale" content="en_US" />
 <meta property="og:title" content="Free Quote | Contact Clear & Clean Window Cleaning" />
-<meta property="og:description" content="Get a fast, free window cleaning quote from Clear & Clean Window Cleaning. Serving Dallas–Fort Worth. Call (972) 890-5467 or request your quote online today!" />
+<meta property="og:description" content="Get a fast, free window cleaning quote from Clear & Clean Window Cleaning. Serving Dallas–Fort Worth. Call (972) 890-2370 or request your quote online today!" />
 <meta property="og:url" content="https://clearandcleanwindowcleaning.com/contact" />
 <meta property="og:image" content="https://clearandcleanwindowcleaning.com/images/clear-clean/hero-truck.webp" />
 <meta property="og:image:width" content="1200" />
@@ -29,18 +29,20 @@
 <meta property="og:image:alt" content="Clear & Clean Window Cleaning — streak-free window cleaning in Dallas–Fort Worth" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Free Quote | Contact Clear & Clean Window Cleaning" />
-<meta name="twitter:description" content="Get a fast, free window cleaning quote from Clear & Clean Window Cleaning. Serving Dallas–Fort Worth. Call (972) 890-5467 or request your quote online today!" />
+<meta name="twitter:description" content="Get a fast, free window cleaning quote from Clear & Clean Window Cleaning. Serving Dallas–Fort Worth. Call (972) 890-2370 or request your quote online today!" />
 <meta name="twitter:image" content="https://clearandcleanwindowcleaning.com/images/clear-clean/hero-truck.webp" />
 <meta name="geo.region" content="US-TX" />
 <meta name="geo.placename" content="Dallas–Fort Worth, Texas" />
 <link rel="icon" type="image/png" href="images/clear-clean/favicon-circle.png?v=20260822d" />
 <link rel="apple-touch-icon" href="images/clear-clean/favicon-circle.png?v=20260822d" />
 <link rel="stylesheet" href="css/fonts.css?v=20260614" />
-<link rel="stylesheet" href="css/styles.css?v=20260822l" />
+<link rel="stylesheet" href="css/styles.css?v=20260830-mobile3" />
 <style>
   /* ===== Quote wizard — standalone, no nav/footer ===== */
   body{min-height:100svh;background:var(--ink);color:#fff;display:flex;flex-direction:column;}
   .quote{flex:1;width:100%;max-width:1080px;margin:0 auto;padding:clamp(28px,5vw,56px) clamp(20px,5vw,40px) clamp(40px,6vw,72px);display:flex;flex-direction:column;}
+  .quote__brand{display:flex;justify-content:center;margin:0 auto clamp(24px,3vw,36px);}
+  .quote__brand img{display:block;width:clamp(118px,17vw,170px);height:auto;filter:brightness(0) invert(1);}
 
   /* progress bar */
   .steps{display:flex;align-items:flex-start;justify-content:space-between;gap:6px;max-width:760px;margin:0 auto clamp(36px,6vw,64px);width:100%;position:relative;}
@@ -70,13 +72,13 @@
   .choices--3{grid-template-columns:repeat(3,1fr);}
   .choices--2{grid-template-columns:repeat(2,1fr);max-width:760px;margin:0 auto;}
   .choices--4{grid-template-columns:repeat(3,1fr);}
-  .choice{position:relative;background:linear-gradient(180deg,#262626 0%,#121212 100%);border:2px solid rgba(255,255,255,.1);
+  .choice{position:relative;background:#fff;border:2px solid rgba(120,168,255,.24);
     border-radius:22px;padding:clamp(22px,3vw,40px) 18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;
     cursor:pointer;text-align:center;font-family:inherit;transition:border-color .2s,transform .2s,box-shadow .25s;min-height:clamp(150px,20vw,230px);}
-  .choice:hover{transform:translateY(-3px);border-color:rgba(120,168,255,.55);}
-  .choice.is-selected{border-color:var(--orange);box-shadow:0 0 0 3px rgba(120,168,255,.25),0 20px 44px -24px rgba(120,168,255,.5);}
+  .choice:hover{transform:translateY(-3px);border-color:rgba(120,168,255,.8);}
+  .choice.is-selected{background:#f4f8ff;border-color:var(--orange);box-shadow:0 0 0 3px rgba(120,168,255,.25),0 20px 44px -24px rgba(120,168,255,.5);}
   .choice svg{width:clamp(48px,6vw,84px);height:clamp(48px,6vw,84px);color:var(--orange);}
-  .choice__name{font-weight:900;text-transform:uppercase;letter-spacing:.01em;color:#fff;font-size:clamp(16px,1.9vw,26px);line-height:1.05;}
+  .choice__name{font-weight:900;text-transform:uppercase;letter-spacing:.01em;color:var(--ink);font-size:clamp(16px,1.9vw,26px);line-height:1.05;}
   .choices--4 .choice{padding:clamp(18px,2vw,28px) 14px;min-height:clamp(140px,16vw,190px);gap:14px;}
   .choices--4 .choice svg{width:clamp(40px,4.5vw,60px);height:clamp(40px,4.5vw,60px);}
   .choices--4 .choice__name{font-size:clamp(13px,1.4vw,17px);}
@@ -93,10 +95,13 @@
   .phone-wrap .cc{flex:0 0 auto;display:flex;align-items:center;padding:0 16px;background:#efefed;border-radius:14px;color:#444;font-weight:700;font-size:17px;}
 
   /* nav buttons */
-  .q-nav{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:clamp(34px,5vw,56px);}
-  .q-count{font-weight:700;color:#8c8c8c;font-size:clamp(15px,1.6vw,18px);}
-  .q-actions{display:flex;gap:14px;margin-left:auto;}
+  .q-nav{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:clamp(28px,4vw,42px);}
+  .q-count{font-weight:800;color:#9eafd0;font-size:14px;letter-spacing:.04em;}
+  .q-actions{display:flex;align-items:center;gap:10px;margin-left:auto;}
   .q-actions .btn{font-weight:900;font-family:inherit;}
+  .q-arrow{width:52px;min-width:52px;padding:0;}
+  .q-arrow svg{width:20px;height:20px;}
+  .q-submit{min-width:190px;}
   .q-err{display:none;text-align:center;background:rgba(220,60,60,.14);border:1px solid rgba(220,60,60,.4);color:#ff8d8d;font-weight:700;border-radius:14px;padding:14px 18px;margin:22px auto 0;max-width:880px;}
   .q-err.show{display:block;}
 
@@ -118,6 +123,12 @@
   @media(max-width:460px){
     .steps{max-width:100%;}
     .step__label{display:none;}
+    .quote{padding-top:20px;}
+    .quote__brand{margin-bottom:22px;}
+    .quote__brand img{width:126px;}
+    .steps{margin-bottom:32px;}
+    .q-nav{margin-top:26px;}
+    .q-submit{min-width:0;padding:0 20px;font-size:14px;}
   }
 </style>
 
@@ -126,6 +137,7 @@
 </head>
 <body>
 <main class="quote">
+  <a class="quote__brand" href="/" aria-label="Clear & Clean Window Cleaning home"><img src="images/clear-clean/logo-wordmark.webp" alt="Clear & Clean Window Cleaning" /></a>
   <!-- progress bar -->
   <div class="steps" id="steps">
     <div class="step" data-step="1"><div class="step__dot">1</div><div class="step__label">Your Info</div><div class="step__line"></div></div>
@@ -195,9 +207,9 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="1.2"/><path d="M4 8h16M4 12h16M4 16h16"/></svg>
           <span class="choice__name">Screen Cleaning</span>
         </button>
-        <button type="button" class="choice" data-value="Holiday Lighting">
+        <button type="button" class="choice" data-value="Christmas Lights">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 6.5C8 9 16 9 21 6.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 8v2.4M12 8.6v1.8M18 8v2.4" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="6" cy="12" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="18" cy="12" r="1.8"/></svg>
-          <span class="choice__name">Holiday Lighting</span>
+          <span class="choice__name">Christmas Lights</span>
         </button>
       </div>
     </section>
@@ -220,9 +232,9 @@
     <div class="q-nav">
       <span class="q-count" id="qCount">Step 1 / 4</span>
       <div class="q-actions">
-        <button type="button" class="btn btn-orange" id="prevBtn" style="display:none;">Previous</button>
-        <button type="button" class="btn btn-white" id="nextBtn">Next</button>
-        <button type="submit" class="btn btn-orange" id="submitBtn" style="display:none;">Request My Quote</button>
+        <button type="button" class="btn btn-white q-arrow" id="prevBtn" style="display:none;" aria-label="Previous step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+        <button type="button" class="btn btn-orange q-arrow" id="nextBtn" aria-label="Next step"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+        <button type="submit" class="btn btn-orange q-submit" id="submitBtn" style="display:none;">Request My Quote</button>
       </div>
     </div>
   </form>
@@ -231,7 +243,7 @@
   <div class="q-done" id="qDone">
     <div class="q-done__badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
     <h2>Thank You!</h2>
-    <p>Your quote request is on its way to the Clear & Clean team. We'll be in touch shortly — usually within one business day. Prefer to talk now? Call us at (972) 890-5467.</p>
+    <p>Your quote request is on its way to the Clear & Clean team. We'll be in touch shortly — usually within one business day. Prefer to talk now? Call us at (972) 890-2370.</p>
     <a class="btn btn-orange btn-lg" href="/">Back To Home</a>
   </div>
 </main>
@@ -366,7 +378,7 @@
         "Phone: " + val('phone') + "\n\n" +
         "Address: " + val('street') + ", " + val('city') + " " + val('zip');
       var subject = "Free Quote Request — " + val('firstName') + " " + val('lastName');
-      window.location.href = "mailto:info@clearandcleanwindowcleaning.com?subject=" +
+      window.location.href = "mailto:max@clearandcleanwindowcleaning.com?subject=" +
         encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
     });
   });

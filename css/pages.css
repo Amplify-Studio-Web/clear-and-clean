@@ -228,11 +228,31 @@
   .svc-related{grid-template-columns:repeat(3,1fr);}
   .service-overview-grid{grid-template-columns:repeat(2,1fr);}
 }
-@media(max-width:520px){.location-services-grid{grid-template-columns:1fr;max-width:360px;}}
+@media(max-width:520px){.location-services-grid{grid-template-columns:repeat(2,1fr);gap:12px;max-width:420px;}.location-services-grid .svc{aspect-ratio:1/.82;border-radius:18px;}.location-services-grid .svc::before{content:"↗";position:absolute;z-index:3;right:14px;bottom:14px;display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:#fff;color:var(--ink);font-size:19px;font-weight:900;line-height:1;}.location-services-grid .svc__label{padding:14px;font-size:clamp(20px,5.5vw,26px);}}
 @media(max-width:560px){
   .steps{grid-template-columns:1fr;}
   .checklist{grid-template-columns:1fr;}
   .contact-form{grid-template-columns:1fr;}
   .svc-related{grid-template-columns:repeat(2,1fr);}
   .service-overview-grid{grid-template-columns:1fr;}
+}
+@media(max-width:640px){
+  .page-section .sec-head,.about-intro,.prose,.value,.step,.service-info-card__body,.business-contact-card,.loc-col,.partner-card{ text-align:center; }
+  .prose .eyebrow,.business-contact-card>.eyebrow{margin-left:auto;margin-right:auto;}
+  .prose .btn,.contact-form .btn{justify-self:center;}
+  .value{padding:26px 22px;}
+  .steps{max-width:430px;margin:0 auto;gap:38px;}
+  .step__n{margin:0 auto;}
+  .checklist li{justify-content:center;text-align:center;}
+  .service-info-card__body{align-items:center;}
+  .service-info-card__body .btn{margin-left:auto;margin-right:auto;}
+  .business-contact-card{align-items:center;}
+  .business-map-copy{align-items:center;flex-direction:column;text-align:center;}
+  .business-map-copy p{text-align:center;}
+  .business-facts{text-align:center;}
+  .loc-col__list{align-items:center;}
+  .acc__head{justify-content:center;text-align:center;padding-left:12px;padding-right:12px;}
+  .locations .acc__head,.loc .acc__head{justify-content:flex-start;text-align:left;padding-left:16px;padding-right:16px;}
+  .loc .acc__cities{padding-left:50px;text-align:left;align-items:flex-start;}
+  .acc__ans{padding-left:0;padding-right:0;text-align:center;}
 }
