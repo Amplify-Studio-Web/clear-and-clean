@@ -87,7 +87,7 @@
 '    </div>' +
 '    <div class="footer__bottom">' +
 '      <span class="footer__copy">© <span id="year">2026</span> Clear & Clean Window Cleaning. All rights reserved.</span>' +
-'      <a class="footer__amplify" href="https://www.theamplify.studio" target="_blank" rel="noopener" aria-label="Powered by Amplify"><img src="images/powered-by-amplify.png" alt="Powered by Amplify" /></a>' +
+'      <a class="footer__amplify" href="https://www.amplifyup.io" target="_blank" rel="noopener" aria-label="Powered by Amplify"><img src="images/powered-by-amplify.png" alt="Powered by Amplify" /></a>' +
 '    </div>' +
 '  </div>' +
 '</footer>';
