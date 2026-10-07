@@ -5,7 +5,7 @@
   var nav =
 '<header class="nav" id="nav">' +
 '  <nav class="nav__inner" aria-label="Primary">' +
-'    <a class="nav__logo" href="/" aria-label="Clear & Clean Window Cleaning home"><img src="images/clear-clean/logo-wordmark.webp" alt="Clear & Clean Window Cleaning" /></a>' +
+'    <a class="nav__logo" href="/" aria-label="Clear & Clean Window Cleaning home"><img src="images/clear-clean/logo-wordmark.webp" alt="Clear & Clean Window Cleaning" width="1533" height="1056" /></a>' +
 '    <div class="nav__links">' +
 '      <a class="nav__link" href="/services">Services</a>' +
 '      <a class="nav__link" href="/about-us">About Us</a>' +
@@ -44,7 +44,7 @@
 '  <div class="wrap">' +
 '    <div class="footer__grid">' +
 '      <div class="footer__brand foot-contact">' +
-'        <img class="foot-logo" src="images/clear-clean/logo-wordmark.webp" alt="Clear & Clean Window Cleaning" />' +
+'        <img class="foot-logo" src="images/clear-clean/logo-wordmark.webp" alt="Clear & Clean Window Cleaning" width="1533" height="1056" />' +
 '        <div class="foot-socials" aria-label="Follow Clear & Clean">' +
 '          <a href="https://www.facebook.com/clearandcleanwindowcleaning/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.6 1.6-1.6h1.7V3.8c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.4V10H7.3v3h2.8v8h3.4Z"/></svg></a>' +
 '          <a href="https://www.instagram.com/clearandcleanwindowcleaning/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>' +
@@ -87,7 +87,7 @@
 '    </div>' +
 '    <div class="footer__bottom">' +
 '      <span class="footer__copy">© <span id="year">2026</span> Clear & Clean Window Cleaning. All rights reserved.</span>' +
-'      <a class="footer__amplify" href="https://www.amplifyup.io" target="_blank" rel="noopener" aria-label="Powered by Amplify"><img src="images/powered-by-amplify.png" alt="Powered by Amplify" /></a>' +
+'      <a class="footer__amplify" href="https://www.amplifyup.io" target="_blank" rel="noopener" aria-label="Powered by Amplify"><img src="images/powered-by-amplify.png" alt="Powered by Amplify" width="3000" height="600" /></a>' +
 '    </div>' +
 '  </div>' +
 '</footer>';
