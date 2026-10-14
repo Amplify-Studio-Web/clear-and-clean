@@ -100,8 +100,9 @@
   .field input::placeholder{color:#8a8a8a;}
   .field input:focus,.field textarea:focus{outline:none;border-color:var(--orange);box-shadow:0 0 0 3px rgba(120,168,255,.25);}.field textarea{min-height:108px;resize:vertical;}.field label span{font-weight:600;color:#a4b5d1;text-transform:none;letter-spacing:0;}
   .field-row{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2vw,20px);}
-  .phone-wrap{display:flex;align-items:stretch;gap:10px;}
-  .phone-wrap .cc{flex:0 0 auto;display:flex;align-items:center;padding:0 16px;background:#efefed;border-radius:14px;color:#444;font-weight:700;font-size:17px;}
+  .phone-wrap{display:flex;align-items:stretch;flex-wrap:nowrap;gap:10px;width:100%;min-width:0;}
+  .phone-wrap .cc{flex:0 0 auto;display:flex;align-items:center;justify-content:center;padding:0 16px;background:#efefed;border:2px solid transparent;border-radius:12px;color:#141414;font-family:inherit;font-weight:700;font-size:16px;line-height:1;white-space:nowrap;user-select:none;}
+  .phone-wrap input{flex:1 1 0%;width:0;min-width:0;}
 
   /* nav buttons */
   .q-nav{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:20px;}
@@ -154,7 +155,7 @@
     .quote-option::after{right:11px;width:16px;height:16px;border-width:1.5px;}
     .quote-option.is-selected::after{border-width:5px;}
     .quote-option strong{font-size:14px;line-height:1.12;}.quote-option span{font-size:12px;line-height:1.2;}.quote-option em{padding:2px 5px;font-size:9px;vertical-align:1px;}
-    .fields{gap:12px;}.field{gap:6px;}.field label{font-size:12px;}.field input,.field textarea{font-size:15px;padding:12px 14px;border-radius:11px;}.field textarea{min-height:66px;}.phone-wrap{gap:7px;}.phone-wrap .cc{padding:0 12px;font-size:15px;border-radius:11px;}
+    .fields{gap:12px;}.field{gap:6px;}.field label{font-size:12px;}.field input,.field textarea{font-size:15px;padding:12px 14px;border-radius:11px;}.field textarea{min-height:66px;}.phone-wrap{gap:8px;flex-wrap:nowrap;}.phone-wrap .cc{padding:0 14px;font-size:15px;border-radius:11px;}
     .q-result__eyebrow{margin-bottom:6px;}.q-result{padding:20px 18px;border-radius:18px;}.q-result__top{padding-bottom:14px;}.q-result__top span{font-size:14px;}.q-result__top strong{font-size:48px;}.q-result__note{margin:12px 0;font-size:12px;}.q-breakdown{margin-top:16px;gap:9px;}.q-breakdown div{font-size:13px;}.q-plan-savings{margin-top:16px;padding:12px;}.q-plan-savings strong{font-size:16px;}.q-result__foot{margin-top:12px;font-size:12px;}
     .q-nav{position:sticky;bottom:0;margin-top:16px;padding:10px 0 3px;background:linear-gradient(180deg,rgba(7,27,64,0),var(--ink) 26%);z-index:5;}
     .q-count{font-size:11px;}
@@ -235,7 +236,7 @@
       <div class="fields">
         <div class="field-row">
           <div class="field"><label for="firstName">Full Name</label><input type="text" id="firstName" name="firstName" placeholder="Your name" autocomplete="name" /></div>
-          <div class="field"><label for="phone">Phone Number</label><div class="phone-wrap"><span class="cc">+1</span><input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" autocomplete="tel" /></div></div>
+          <div class="field"><label for="phone">Phone Number</label><div class="phone-wrap"><span class="cc" aria-hidden="true">+1</span><input type="tel" id="phone" name="phone" inputmode="numeric" placeholder="(972) 000-0000" autocomplete="tel-national" /></div></div>
         </div>
         <div class="field"><label for="email">Email Address</label><input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" /></div>
         <div class="field"><label for="street">Service Address</label><input type="text" id="street" name="street" placeholder="123 Main Street" autocomplete="street-address" /></div>
@@ -269,6 +270,7 @@
   </div>
 </main>
 
+<script src="js/phone.js?v=20261014"></script>
 <script>
 (function(){
   "use strict";
@@ -327,7 +329,7 @@
       var fn = val('firstName'), em = val('email'), ph = val('phone');
       if (!fn) return "Please enter your name.";
       if (!em || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)) return "Please enter a valid email address.";
-      if (!ph || ph.replace(/\D/g,'').length < 7) return "Please enter a valid phone number.";
+      if (!ph || ph.replace(/\D/g,'').length < 10) return "Please enter a valid phone number.";
       if (!val('street')) return "Please enter your street address.";
     }
     return null;
@@ -450,7 +452,7 @@
         "Instant Quote: " + document.getElementById('f-quote').value + "\n\n" +
         "Name: " + val('firstName') + "\n" +
         "Email: " + val('email') + "\n" +
-        "Phone: " + val('phone') + "\n\n" +
+        "Phone: " + (window.ClearCleanPhone ? window.ClearCleanPhone.withCountryCode(val('phone')) : val('phone')) + "\n\n" +
         "Address: " + val('street') + "\n\n" +
         "Notes: " + val('notes');
       var subject = "Instant Quote Request — " + val('firstName');
