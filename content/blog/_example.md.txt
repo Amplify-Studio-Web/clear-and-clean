@@ -1,0 +1,26 @@
+---
+title: How often DFW windows need a professional clean
+slug: how-often-dfw-windows-need-a-professional-clean
+date: 2026-04-01
+description: What to know before you book exterior window cleaning for a DFW home.
+service: /exterior-window-cleaning
+image: /images/clear-clean/exterior.webp
+image_alt: Clear and Clean technician cleaning an exterior window
+---
+
+This file is an example only. It is not published, because the name starts with an underscore and does not end in .md.
+
+To publish, save a copy as content/blog/how-often-dfw-windows-need-a-professional-clean.md (drop the underscore and the .txt suffix), then push.
+
+# What affects the schedule
+
+Dust, sprinklers, and pollen build up at different rates.
+
+- Exterior glass often needs a visit a few times a year
+- Interior glass is usually less frequent
+
+Request a [free quote](/contact) when you are ready.
+
+## A smaller heading
+
+The post title in the front matter is the only H1. A Markdown # in the body renders as an h2, and ## renders as an h3.

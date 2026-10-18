@@ -1,3 +1,7 @@
+[build]
+  command = "node scripts/build-blog.mjs"
+  publish = "dist"
+
 [[headers]]
   for = "/*"
   [headers.values]

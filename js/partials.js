@@ -5,11 +5,12 @@
   var nav =
 '<header class="nav" id="nav">' +
 '  <nav class="nav__inner" aria-label="Primary">' +
-'    <a class="nav__logo" href="/" aria-label="Clear & Clean Window Cleaning home"><img src="images/clear-clean/logo-wordmark.webp" alt="Clear & Clean Window Cleaning" /></a>' +
+'    <a class="nav__logo" href="/" aria-label="Clear & Clean Window Cleaning home"><img src="/images/clear-clean/logo-wordmark.webp" alt="Clear & Clean Window Cleaning" /></a>' +
 '    <div class="nav__links">' +
 '      <a class="nav__link" href="/services">Services</a>' +
 '      <a class="nav__link" href="/about-us">About Us</a>' +
 '      <a class="nav__link" href="/reviews">Reviews</a>' +
+'      <a class="nav__link" href="/blog/">Blog</a>' +
 '    </div>' +
 '    <div class="nav__cta">' +
 '      <a class="btn btn-orange" href="/contact">FREE QUOTE</a>' +
@@ -20,6 +21,7 @@
 '  <div class="nav__panel" id="navPanel">' +
 '      <a href="/services">Services</a>' +
 '      <a href="/about-us">About Us</a>' +
+'      <a href="/blog/">Blog</a>' +
 '      <a href="/faq">FAQ</a>' +
 '      <a href="/locations">Locations</a>' +
 '      <a href="/business-info">Business Info</a>' +
@@ -44,7 +46,7 @@
 '  <div class="wrap">' +
 '    <div class="footer__grid">' +
 '      <div class="footer__brand foot-contact">' +
-'        <img class="foot-logo" src="images/clear-clean/logo-wordmark.webp" alt="Clear & Clean Window Cleaning" />' +
+'        <img class="foot-logo" src="/images/clear-clean/logo-wordmark.webp" alt="Clear & Clean Window Cleaning" />' +
 '        <div class="foot-socials" aria-label="Follow Clear & Clean">' +
 '          <a href="https://www.facebook.com/clearandcleanwindowcleaning/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.6 1.6-1.6h1.7V3.8c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.4V10H7.3v3h2.8v8h3.4Z"/></svg></a>' +
 '          <a href="https://www.instagram.com/clearandcleanwindowcleaning/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>' +
@@ -58,6 +60,7 @@
 '          <li><a href="/contact">Contact</a></li>' +
 '          <li><a href="/about-us">About Us</a></li>' +
 '          <li><a href="/reviews">Reviews</a></li>' +
+'          <li><a href="/blog/">Blog</a></li>' +
 '          <li><a href="/gallery">Gallery</a></li>' +
 '          <li><a href="/faq">FAQ</a></li>' +
 '          <li><a href="/business-info">Business Info</a></li>' +
@@ -87,7 +90,7 @@
 '    </div>' +
 '    <div class="footer__bottom">' +
 '      <span class="footer__copy">© <span id="year">2026</span> Clear & Clean Window Cleaning. All rights reserved.</span>' +
-'      <a class="footer__amplify" href="https://www.amplifyup.io" target="_blank" rel="noopener" aria-label="Powered by Amplify"><img src="images/powered-by-amplify.png" alt="Powered by Amplify" /></a>' +
+'      <a class="footer__amplify" href="https://www.amplifyup.io" target="_blank" rel="noopener" aria-label="Powered by Amplify"><img src="/images/powered-by-amplify.png" alt="Powered by Amplify" /></a>' +
 '    </div>' +
 '  </div>' +
 '</footer>';
@@ -99,8 +102,14 @@
 
   // highlight the current page in the nav
   var here = (location.pathname.split("/").pop() || "index.html");
+  var path = location.pathname.replace(/\/+$/, "") || "/";
   document.querySelectorAll(".nav__link, .nav__panel a").forEach(function (a) {
     var href = a.getAttribute("href");
     if (href === here) a.classList.add("is-active");
   });
+  if (path === "/blog" || path.indexOf("/blog/") === 0) {
+    document.querySelectorAll('.nav__link[href="/blog/"], .nav__panel a[href="/blog/"]').forEach(function (a) {
+      a.classList.add("is-active");
+    });
+  }
 })();
