@@ -10,7 +10,7 @@
 '      <a class="nav__link" href="/services">Services</a>' +
 '      <a class="nav__link" href="/about-us">About Us</a>' +
 '      <a class="nav__link" href="/reviews">Reviews</a>' +
-'      <a class="nav__link" href="/blog">Blog</a>' +
+'      <a class="nav__link" href="/blog/">Blog</a>' +
 '    </div>' +
 '    <div class="nav__cta">' +
 '      <a class="btn btn-orange" href="/contact">FREE QUOTE</a>' +
@@ -21,7 +21,7 @@
 '  <div class="nav__panel" id="navPanel">' +
 '      <a href="/services">Services</a>' +
 '      <a href="/about-us">About Us</a>' +
-'      <a href="/blog">Blog</a>' +
+'      <a href="/blog/">Blog</a>' +
 '      <a href="/faq">FAQ</a>' +
 '      <a href="/locations">Locations</a>' +
 '      <a href="/business-info">Business Info</a>' +
@@ -60,7 +60,7 @@
 '          <li><a href="/contact">Contact</a></li>' +
 '          <li><a href="/about-us">About Us</a></li>' +
 '          <li><a href="/reviews">Reviews</a></li>' +
-'          <li><a href="/blog">Blog</a></li>' +
+'          <li><a href="/blog/">Blog</a></li>' +
 '          <li><a href="/gallery">Gallery</a></li>' +
 '          <li><a href="/faq">FAQ</a></li>' +
 '          <li><a href="/business-info">Business Info</a></li>' +
@@ -108,7 +108,7 @@
     if (href === here) a.classList.add("is-active");
   });
   if (path === "/blog" || path.indexOf("/blog/") === 0) {
-    document.querySelectorAll('.nav__link[href="/blog"], .nav__panel a[href="/blog"]').forEach(function (a) {
+    document.querySelectorAll('.nav__link[href="/blog/"], .nav__panel a[href="/blog/"]').forEach(function (a) {
       a.classList.add("is-active");
     });
   }

@@ -1,6 +1,6 @@
 # Blog
 
-Add a post by saving one Markdown file at `content/blog/<slug>.md` and pushing to the branch Netlify deploys. No template edit is required. The build publishes it at `/blog/<slug>` and adds that URL to `sitemap.xml`.
+Add a post by saving one Markdown file at `content/blog/<slug>.md` and pushing to the branch Netlify deploys. No template edit is required. The build publishes it at `/blog/<slug>/` and adds that URL to `sitemap.xml`.
 
 Files in `content/blog/` whose names start with `_`, or that do not end in `.md`, are ignored. `content/blog/_example.md.txt` shows the format and is not a live post.
 
@@ -45,11 +45,10 @@ In the body, Markdown headings are lowered by one level so the page keeps a sing
 
 ## URLs and sitemap
 
-- The index is `/blog` (file: `blog/index.html`).
-- A post is `/blog/<slug>` (file: `blog/<slug>/index.html`).
-- Canonical URLs use `https://clearandcleanwindowcleaning.com` and omit the trailing slash, matching pages such as `/about-us`.
-- Netlify also serves `/blog/` and `/blog/<slug>/` from those index files.
-- `scripts/build-blog.mjs` rewrites `sitemap.xml` in the publish output. Every existing URL stays, then `/blog` and each post are appended.
+- The index is `/blog/` (file: `blog/index.html`).
+- A post is `/blog/<slug>/` (file: `blog/<slug>/index.html`).
+- Canonical URLs use `https://clearandcleanwindowcleaning.com` and include the trailing slash. Netlify returns 200 for those directory URLs and redirects `/blog` to `/blog/`. Flat pages such as `/about-us` stay without a trailing slash.
+- `scripts/build-blog.mjs` rewrites `sitemap.xml` in the publish output. Every existing URL stays, then `/blog/` and each post are appended.
 
 ## Preview locally
 
@@ -60,6 +59,6 @@ node scripts/build-blog.mjs
 python3 -m http.server 8765 --directory dist
 ```
 
-Open `http://127.0.0.1:8765/blog/`. With zero `.md` posts, the index shows a short note and the free quote and call buttons.
+Open `http://127.0.0.1:8765/blog/`. With zero `.md` posts, the index shows a short note and the free quote and call buttons. On this local server, `/blog` redirects to `/blog/`.
 
 Netlify runs `node scripts/build-blog.mjs` and publishes `dist` (`netlify.toml`).

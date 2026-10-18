@@ -324,14 +324,14 @@ ${body}
 }
 
 function renderIndex(posts) {
-  const canonical = `${SITE}/blog`;
+  const canonical = `${SITE}/blog/`;
   const description = "Articles from Clear & Clean Window Cleaning for homes and businesses across DFW.";
   const crumbItems = [
     { name: "Home", href: "/", url: `${SITE}/` },
     { name: "Blog", href: "", url: canonical },
   ];
   const list = posts.length
-    ? `<ul class="blog-list">${posts.map((post) => `<li class="blog-card"><time datetime="${post.date}">${escapeHtml(formatDate(post.date))}</time><h2><a href="/blog/${post.slug}">${escapeHtml(post.title)}</a></h2><p>${escapeHtml(post.description)}</p><a class="btn btn-orange" href="/blog/${post.slug}">Read article</a></li>`).join("")}</ul>`
+    ? `<ul class="blog-list">${posts.map((post) => `<li class="blog-card"><time datetime="${post.date}">${escapeHtml(formatDate(post.date))}</time><h2><a href="/blog/${post.slug}/">${escapeHtml(post.title)}</a></h2><p>${escapeHtml(post.description)}</p><a class="btn btn-orange" href="/blog/${post.slug}/">Read article</a></li>`).join("")}</ul>`
     : `<div class="blog-empty"><p>No articles yet. Check back soon, or tell us about your windows and we will send a free quote.</p>${quoteButtons()}</div>`;
   const sectionClass = posts.length ? "page-section page-section--light" : "page-section page-section--ink";
   const body = `<section class="page-hero page-hero--photo" style="background-image:url('${ASSETS.hero}')"><div class="wrap">${crumbs(crumbItems)}<p class="eyebrow">Clear &amp; Clean</p><h1>Blog</h1><p class="page-hero__sub">Notes on clearer windows for DFW homes and businesses.</p></div></section>
@@ -346,7 +346,7 @@ function renderIndex(posts) {
 }
 
 function renderPost(post) {
-  const canonical = `${SITE}/blog/${post.slug}`;
+  const canonical = `${SITE}/blog/${post.slug}/`;
   const service = serviceTarget(post.service);
   const related = service.fallback
     ? `<p class="blog-related">Explore our <a href="${escapeHtml(service.href)}">${escapeHtml(service.label)}</a>.</p>`
@@ -373,7 +373,7 @@ function renderPost(post) {
   if (post.image) posting.image = absUrl(post.image);
   const crumbItems = [
     { name: "Home", href: "/", url: `${SITE}/` },
-    { name: "Blog", href: "/blog", url: `${SITE}/blog` },
+    { name: "Blog", href: "/blog/", url: `${SITE}/blog/` },
     { name: post.title, href: "", url: canonical },
   ];
   const body = `<section class="page-hero page-hero--photo page-hero--blog" style="background-image:url('${ASSETS.hero}')"><div class="wrap">${crumbs(crumbItems)}<p class="eyebrow"><time datetime="${post.date}">${escapeHtml(formatDate(post.date))}</time></p><h1>${escapeHtml(post.title)}</h1><p class="page-hero__sub">${escapeHtml(post.description)}</p>${quoteButtons()}</div></section>
@@ -445,7 +445,7 @@ function main() {
   const sourceSitemap = readFileSync(sourceSitemapPath, "utf8");
   const posts = loadPosts();
   for (const post of posts) warnMissingService(post);
-  const extra = [`${SITE}/blog`, ...posts.map((post) => `${SITE}/blog/${post.slug}`)];
+  const extra = [`${SITE}/blog/`, ...posts.map((post) => `${SITE}/blog/${post.slug}/`)];
   const sitemap = buildSitemap(sourceSitemap, extra);
   assertNoEmDash(sitemap, "sitemap");
   assertNoEmDash(renderIndex(posts), "blog index");
