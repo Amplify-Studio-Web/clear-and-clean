@@ -29,12 +29,12 @@
     .service-split__content{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center;padding:110px 24px 46px;}
     .service-split__kicker{margin:0 0 22px;font-size:13px;font-weight:900;letter-spacing:.26em;text-transform:uppercase;}
     .service-split__choice--lights .service-split__kicker{color:var(--orange);}
-    .service-split h1{margin:0;color:#fff;font-size:clamp(46px,6.4vw,96px);line-height:.84;text-transform:uppercase;letter-spacing:-.045em;}
+    .service-split h1,.service-split h2{margin:0;color:#fff;font-size:clamp(46px,6.4vw,96px);line-height:.84;text-transform:uppercase;letter-spacing:-.045em;}
     .service-split__lights-word{display:block;color:var(--orange);}
     .service-split .btn{min-width:168px;margin-top:34px;}
     .service-split__choice--lights .btn{background:var(--orange);border-color:var(--orange);color:var(--ink);box-shadow:0 12px 30px rgba(120,168,255,.34);}
     body:has(.service-split:not([hidden])){overflow:hidden;}
-    @media(max-width:700px){.service-split{display:block;overflow:hidden;}.service-split__choice{min-height:0;height:50svh;}.service-split__brand{top:clamp(22px,4vw,34px);}.service-split__brand img{width:clamp(126px,37vw,174px);}.service-split__content{padding:82px 20px 22px;}.service-split h1{font-size:clamp(40px,12vw,62px);}.service-split__kicker{margin-bottom:14px;font-size:11px;}.service-split .btn{min-width:164px;min-height:52px;margin-top:22px;font-size:15px;}}
+    @media(max-width:700px){.service-split{display:block;overflow:hidden;}.service-split__choice{min-height:0;height:50svh;}.service-split__brand{top:clamp(22px,4vw,34px);}.service-split__brand img{width:clamp(126px,37vw,174px);}.service-split__content{padding:82px 20px 22px;}.service-split h1,.service-split h2{font-size:clamp(40px,12vw,62px);}.service-split__kicker{margin-bottom:14px;font-size:11px;}.service-split .btn{min-width:164px;min-height:52px;margin-top:22px;font-size:15px;}}
     .hero__media img{width:100%;height:100%;object-fit:cover}.hero__media:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,17,42,.88),rgba(4,17,42,.22))}
     .hero__content{max-width:900px}.hero__content p{max-width:610px}
     .hero__eyebrow{margin:0 auto 18px}.hero__proof{margin:12px auto 24px;font-size:clamp(16px,1.7vw,20px)}.hero__proof strong{font-weight:900}
@@ -68,10 +68,10 @@
   <section class="service-split" id="serviceSplit" aria-label="Choose a Clear & Clean service">
     <div class="service-split__brand"><img src="images/clear-clean/logo-wordmark.webp" alt="Clear & Clean Window Cleaning" /></div>
     <a class="service-split__choice service-split__choice--windows" href="/?service=windows" aria-label="Enter Window Cleaning">
-      <div class="service-split__content"><p class="service-split__kicker">I need</p><h1>Window<br>Cleaning</h1><span class="btn btn-white btn-lg">ENTER <span aria-hidden="true">→</span></span></div>
+      <div class="service-split__content"><p class="service-split__kicker">I need</p><h2>Window<br>Cleaning</h2><span class="btn btn-white btn-lg">ENTER <span aria-hidden="true">→</span></span></div>
     </a>
     <a class="service-split__choice service-split__choice--lights" href="/holiday-lighting" aria-label="Enter Holiday Lighting">
-      <div class="service-split__content"><p class="service-split__kicker">I need</p><h1>Holiday<span class="service-split__lights-word">Lighting</span></h1><span class="btn btn-lg">ENTER <span aria-hidden="true">→</span></span></div>
+      <div class="service-split__content"><p class="service-split__kicker">I need</p><h2>Holiday<span class="service-split__lights-word">Lighting</span></h2><span class="btn btn-lg">ENTER <span aria-hidden="true">→</span></span></div>
     </a>
   </section>
   <div id="site-nav"></div>

@@ -1,4 +1,4 @@
-/* Clear & Clean Window Cleaning — homepage interactions */
+/* Clear & Clean Window Cleaning: homepage interactions */
 (function () {
   "use strict";
 

@@ -1,5 +1,5 @@
 /* ============================================================
-   Clear & Clean Window Cleaning — shared site styles
+   Clear & Clean Window Cleaning: shared site styles
    ============================================================ */
 :root{
   --orange:#78a8ff;
@@ -120,7 +120,7 @@ a{color:inherit;text-decoration:none;}
 
 .nav__inner{position:relative;z-index:2;}
 
-/* mobile menu — full-screen takeover */
+/* mobile menu: full-screen takeover */
 .nav__panel{
   pointer-events:auto;position:fixed;inset:0;z-index:1;
   background:var(--ink);
@@ -304,7 +304,7 @@ a{color:inherit;text-decoration:none;}
 /* ============================================================
    REVEAL ANIMATION
    ============================================================ */
-/* Visible by default — animation only hides/reveals as an enhancement, so
+/* Visible by default: animation only hides/reveals as an enhancement, so
    content always shows in print, reduced-motion, or frozen-clock contexts. */
 [data-reveal]{opacity:1;transform:none;}
 @media(prefers-reduced-motion:no-preference){
