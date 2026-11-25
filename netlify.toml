@@ -31,6 +31,31 @@
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
+# Short domains 301 to the primary site, preserving paths.
+[[redirects]]
+  from = "https://clrncln.com/*"
+  to = "https://clearandcleanwindowcleaning.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://clrncln.com/*"
+  to = "https://clearandcleanwindowcleaning.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.clrncln.com/*"
+  to = "https://clearandcleanwindowcleaning.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.clrncln.com/*"
+  to = "https://clearandcleanwindowcleaning.com/:splat"
+  status = 301
+  force = true
+
 # Retired template routes now lead visitors into the DFW site.
 [[redirects]]
   from = "/pricing"
